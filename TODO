@@ -1,5 +1,5 @@
 Readme:
-
+  ☐ Properly define testing process etc.
 Package versions:
   ☐ Update tailwind.
   ☐ tailwind macro on a 1.0 alpha? And the latest official release is 0.5? What do I do?
@@ -36,6 +36,7 @@ Meta Tags:
   ☐ Author rel me stuff? I know it exists, go find out.
 
 Projects:
+  ☐ I deployed repo `charlotte` to gh pages and it tacked it onto my personal site. Does that mean I can keep each project managed in their own repo, set them to use gh pages and then gh will hook it all up for me? 
   Paint app:
     ☐ Change complimentary colours to flex, not grid.
     ☐ Check paint data
