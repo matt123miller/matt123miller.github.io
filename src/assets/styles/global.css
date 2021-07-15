@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  font-size: 100%;
+  font-size: 16px;
   color: var(--dracula-foreground);
   
   background-color: var(--dracula-background);
@@ -292,10 +292,11 @@ p + p {
 .format-html {
 }
 
-.blog-post-container {
+.text-content-container {
+  font-size: 1rem;
 }
 
-.blog-post-container blockquote {
+.text-content-container blockquote {
   background-color: var(--dracula-selection);
 
   @apply italic my-2 p-5;
