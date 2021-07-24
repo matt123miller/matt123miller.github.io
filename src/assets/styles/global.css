@@ -296,6 +296,10 @@ p + p {
   font-size: 1rem;
 }
 
+.text-content-container li p {
+  display: inline;
+}
+
 .text-content-container blockquote {
   background-color: var(--dracula-selection);
 

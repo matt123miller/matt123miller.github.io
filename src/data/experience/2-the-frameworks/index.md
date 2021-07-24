@@ -1,9 +1,9 @@
 ---
-category: 'experiences'
-company: 'The Frameworks'
-position: 'Developer'
-startDate: 'April 2017'
-endDate: 'Feb 2019'
+category: "experiences"
+company: "The Frameworks"
+position: "Developer"
+startDate: "April 2017"
+endDate: "Feb 2019"
 ---
 
 Returning after my studies in 2017 I continued working for The Frameworks first as an iOS developer and then as a web dev deloper. During this period I worked on various projects for world renowned clients.
