@@ -1,10 +1,8 @@
 .paint-picker-app {
-  
+  --border-radius: 0.5rem;
+  text-align: center;
 }
 
-main {
-  --border-radius: 0.5rem;
-}
 /* 
 @media (prefers-color-scheme: dark) {
     body {
@@ -16,11 +14,6 @@ main {
   transition: all 0.5s;
 }
 
-body {
-  text-align: center;
-  /* TODO: make sure transition doesn't happen on page load  */
-}
-
 .paint-search {
   border-radius: 1rem;
   padding: 0.5rem 1rem;
@@ -30,7 +23,7 @@ body {
 }
 
 .filters {
- width: 100%;
+  width: 100%;
 }
 /* 
 .filters > :not(:first-child) {
@@ -40,7 +33,6 @@ body {
 .filters input[type="radio"] {
   display: none;
 }
-
 
 /* 
  * Complimentary colours
@@ -71,28 +63,12 @@ body {
   max-width: 150px;
 }
 
-
-
 /* 
  * All the paint stuff
  */
 
-
 ul {
   padding-inline-start: 0px;
-}
-
-li {
-  list-style: none;
-  transition: var(--default-animation-transition);
-}
-li::before {
-  content: "";
-  color: var(--dracula-comment);
-}
-
-li:hover {
-  transform: scale(1.05);
 }
 
 .paint-list {
@@ -109,6 +85,16 @@ li:hover {
   grid-column: span 1;
   grid-row: span 1;
   min-width: 150px;
+  list-style: none;
+  transition: var(--default-animation-transition);
+}
+.paint-list > li::before {
+  content: "";
+  color: var(--dracula-comment);
+}
+
+.paint-list > li:hover {
+  transform: scale(1.05);
 }
 
 .paint-container {
