@@ -22,9 +22,7 @@ const IndexPage: React.FC = () => (
       </p>
       <p>
         You can read my thoughts about all these things{' '}
-        <Link className="animated-link" to="/blog">
-          on my blog
-        </Link>
+        <Link to="/blog">on my blog</Link>
       </p>
     </div>
   </Layout>

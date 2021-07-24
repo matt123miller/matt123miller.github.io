@@ -14,4 +14,4 @@ The stand out projects for me were:
 
 - A website and series of backend services for a social media influencer startup to help them compute engagement metrics, market and audience segregation and the value that each influencer can bring to brands looking to advertise with those influencers.
 
-- <a class="animated-link" href="https://www.ibm.com/marketing/uk-en/this-is-ibm/identity">A fun web page</a> for IBM that showcases some of the impactful work they've done over the years. Each of the images has different hover and click effects, with resizing content that also moves around it's neighbours as appropriate.
+- [A fun web page](https://www.ibm.com/marketing/uk-en/this-is-ibm/identity) for IBM that showcases some of the impactful work they've done over the years. Each of the images has different hover and click effects, with resizing content that also moves around it's neighbours as appropriate.
