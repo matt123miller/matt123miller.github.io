@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Matt Miller`,
     description: `My personal site`,
-    author: `Matt Miller`
+    author: `Matt Miller`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -11,29 +11,29 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`
-      }
+        path: `${__dirname}/src/assets/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/src/data`
-      }
+        path: `${__dirname}/src/data`,
+      },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 768,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -46,8 +46,8 @@ module.exports = {
         background_color: `#81e6d9`,
         theme_color: `#81e6d9`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`
-      }
+        icon: `src/assets/images/gatsby-icon.png`,
+      },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
@@ -57,8 +57,8 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: [`src/assets/styles/global.css`]
-      }
-    }
-  ]
+        purgeOnly: [`src/assets/styles/global.css`],
+      },
+    },
+  ],
 };

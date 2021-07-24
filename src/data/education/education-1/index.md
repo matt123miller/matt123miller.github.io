@@ -1,9 +1,9 @@
 ---
-category: 'education'
-university: 'University of Greenwich'
-degree: 'BSC Computing with Game Development'
-startDate: 'Sep 2013'
-endDate: 'May 2017'
+category: "education"
+university: "University of Greenwich"
+degree: "BSC Computing with Game Development"
+startDate: "Sep 2013"
+endDate: "May 2017"
 ---
 
 Graduated from Greenwich with a first class degree, including a sandwich year in industry.

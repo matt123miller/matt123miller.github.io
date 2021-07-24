@@ -6,7 +6,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       modules: [path.resolve(__dirname, `src`), `node_modules`],
       fallback: {
-        path: require.resolve('path-browserify'),
+        path: require.resolve("path-browserify"),
       },
     },
   });
@@ -20,7 +20,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };
@@ -61,8 +61,8 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: `${post.node.fields.slug}`,
         previous,
-        next
-      }
+        next,
+      },
     });
   });
 };

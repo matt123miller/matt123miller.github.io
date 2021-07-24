@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {},
   plugins: [],
-  darkMode: 'media'
+  darkMode: "media",
 };

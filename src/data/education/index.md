@@ -1,5 +1,5 @@
 ---
-category: 'education section'
-title: 'Qualifications'
-subtitle: 'My Qualifications'
+category: "education section"
+title: "Qualifications"
+subtitle: "My Qualifications"
 ---

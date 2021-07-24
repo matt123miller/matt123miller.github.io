@@ -9,7 +9,6 @@
 Move the purge end below the tailwind imports for release   */
 
 body {
-
   --default-animation-transition: 0.15s linear;
   /* Colours */
   --dracula-background: #282a36;
@@ -28,7 +27,7 @@ body {
 body {
   font-size: 16px;
   color: var(--dracula-foreground);
-  
+
   background-color: var(--dracula-background);
   user-select: var(--dracula-selection);
 }
@@ -40,7 +39,6 @@ Everything ends up inside body>div#___gatsby>div#gatsby-focus-wrapper
 Keeping footer at the bottom using technique from here https://moderncss.dev/keep-the-footer-at-the-bottom-flexbox-vs-grid/
 */
 div#gatsby-focus-wrapper {
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,7 +51,6 @@ div#gatsby-focus-wrapper > header {
 }
 
 div#gatsby-focus-wrapper > main {
-
 }
 
 div#gatsby-focus-wrapper > footer {
@@ -87,7 +84,12 @@ hr {
   border: 0;
   height: 3px;
   background: var(--dracula-comment);
-  background-image: linear-gradient(to right, var(--dracula-pink), var(--dracula-cyan), var(--dracula-pink));
+  background-image: linear-gradient(
+    to right,
+    var(--dracula-pink),
+    var(--dracula-cyan),
+    var(--dracula-pink)
+  );
   @apply my-2;
 }
 
@@ -107,7 +109,8 @@ button {
   padding: 0.5rem 1rem;
 }
 
-button:active, button.active {
+button:active,
+button.active {
   border: var(--dracula-purple) 2px solid;
 }
 
@@ -117,28 +120,27 @@ button + button {
 
 /* Rainbow li bullets! */
 
-li:nth-child(7n+1)::before {
+li:nth-child(7n + 1)::before {
   color: var(--dracula-red);
 }
-li:nth-child(7n+2)::before {
+li:nth-child(7n + 2)::before {
   color: var(--dracula-orange);
 }
-li:nth-child(7n+3)::before {
+li:nth-child(7n + 3)::before {
   color: var(--dracula-yellow);
 }
-li:nth-child(7n+4)::before {
+li:nth-child(7n + 4)::before {
   color: var(--dracula-green);
 }
-li:nth-child(7n+5)::before {
+li:nth-child(7n + 5)::before {
   color: var(--dracula-purple);
 }
-li:nth-child(7n+6)::before {
+li:nth-child(7n + 6)::before {
   color: var(--dracula-cyan);
 }
 li:nth-child(7n)::before {
   color: var(--dracula-pink);
 }
-
 
 /** Nav things */
 
@@ -156,15 +158,15 @@ li:nth-child(7n)::before {
   animation-iteration-count: infinite;
 }
 
-@keyframes spin { 
-  0%{
+@keyframes spin {
+  0% {
     rotate: 0deg;
   }
-  50%{
+  50% {
     rotate: 180deg;
   }
   100% {
-    rotate:360deg;
+    rotate: 360deg;
   }
 }
 
@@ -297,7 +299,8 @@ li a:hover::before {
 
 /* General content stuff */
 
-li, p {
+li,
+p {
   font-size: 1.25rem;
   line-height: 1.6;
 }
@@ -309,7 +312,8 @@ li, p {
   @apply flex flex-col mx-3 rounded-lg;
 }
 
-.link-card-content:hover, .link-card-content:active {
+.link-card-content:hover,
+.link-card-content:active {
   transform: scale(1.05);
 }
 
@@ -317,6 +321,7 @@ li, p {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+
 /* p followed by p, mostly for content pages */
 p + p {
   @apply mt-3;
