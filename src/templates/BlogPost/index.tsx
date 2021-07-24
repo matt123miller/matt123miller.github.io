@@ -41,6 +41,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
       <Container section>
         <TitleSection title={post.frontmatter.title} />
         <FormatHtml content={post.html} />
+        {/* Extract following */}
         <div className="w-full flex justify-between mt-10">
           <span>
             {previous && (

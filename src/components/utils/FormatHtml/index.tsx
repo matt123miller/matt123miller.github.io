@@ -6,7 +6,7 @@ interface Props {
 
 const FormatHtml: React.FC<Props> = ({ content }) => (
   <div
-    className="format-html blog-post-container"
+    className="format-html text-content-container"
     dangerouslySetInnerHTML={{
       __html: content
     }}
