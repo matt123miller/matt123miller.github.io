@@ -298,6 +298,42 @@ li a:hover::before {
   @apply w-16 h-16;
 }
 
+/* Timeline stuff */
+
+.timeline {
+  border-color: var(--dracula-cyan);
+  @apply flex flex-col w-full p-4 relative border-l;
+}
+
+.timeline:last-child {
+  padding-bottom: 0;
+}
+
+.timeline .point {
+  background-color: var(--dracula-pink);
+  border-color: var(--dracula-cyan);
+  left: -6px;
+  top: 30px;
+  @apply w-3 h-3 border rounded-full absolute;
+}
+
+.timeline .date {
+  width: fit-content;
+  @apply text-xs;
+}
+
+/* Nav */
+
+button.nav-toggle {
+  outline: none !important;
+  @apply: flex flex-col items-end justify-center cursor-pointer w-6 h-5;
+}
+
+button.nav-toggle span {
+  background-color: var(--dracula-purple);
+  transition: 0.2s;
+  /* @apply inline-block w-6 h-px; */
+}
 /* General content stuff */
 
 li,

@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
-import * as Styled from './styles';
-
 interface MainNavItem {
   title: string;
   slug: string;
 }
 
 const mainNavItems: MainNavItem[] = [
-  
   {
     title: 'Blog',
-    slug: '/blog/'
+    slug: '/blog/',
   },
   {
     title: 'My Work',
-    slug: '/experience/'
+    slug: '/experience/',
   },
   {
     title: 'Uses',
-    slug: '/blog/uses'
+    slug: '/blog/uses',
   },
   {
     title: 'Contact Me',
-    slug: '/contact/'
-  }
+    slug: '/contact/',
+  },
 ];
 
 const MainNav: React.FC = () => {
@@ -33,26 +30,25 @@ const MainNav: React.FC = () => {
 
   return (
     <>
-      <Styled.MainNav open={open}>
-        {
-          mainNavItems.map((item, index) => (
-            <Link 
-              className={'main-nav-item animated-link text-xl'}
-              key={`nav-item-${index}`}
-              to={item.slug}
-              activeClassName="active"
-            >
-              {item.title}
-            </Link>
-          ))
-        }
-      </Styled.MainNav>
-      <Styled.ToogleMainNav open={open} onClick={() => setOpen(!open)}>
-        {/* Each span is styled in the styled component. Just ignore it. */}
-        <span />
-        <span />
-        <span />
-      </Styled.ToogleMainNav>
+      <nav
+        className={`hidden ${
+          open ? 'flex' : 'flex-col'
+        } sm:flex sm:flex-row sm:w-auto sm:order-none sm:my-0 w-full order-last my-4`}
+      >
+        {mainNavItems.map((item, index) => (
+          <Link
+            className="main-nav-item animated-link text-xl"
+            key={`nav-item-${index}`}
+            to={item.slug}
+            activeClassName="active"
+          >
+            {item.title}
+          </Link>
+        ))}
+      </nav>
+      <button className="sm:hidden nav-toggle" onClick={() => setOpen(!open)}>
+        <span>button</span>
+      </button>
     </>
   );
 };
