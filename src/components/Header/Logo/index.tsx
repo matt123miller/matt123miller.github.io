@@ -1,9 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { ImageSharpFluid } from 'helpers/definitions';
-import * as Styled from './styles';
 
 const Logo: React.FC = () => {
   const { site, placeholderImage } = useStaticQuery(graphql`
@@ -29,7 +28,7 @@ const Logo: React.FC = () => {
   const logoImage: ImageSharpFluid = placeholderImage.childImageSharp.fluid;
 
   return (
-    <Styled.Logo to="/">
+    <Link className="flex items-center mr-auto" to="/">
       <figure className="logo-image">
         <Img
           className="border-1 rounded-full"
@@ -38,7 +37,7 @@ const Logo: React.FC = () => {
         />
       </figure>
       <h1 className="text-lg animated-link text-xl">Matt Miller</h1>
-    </Styled.Logo>
+    </Link>
   );
 };
 
