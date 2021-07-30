@@ -23,14 +23,14 @@ const IndexPage: React.FC = () => {
         <TitleSection title="Contact me" center />
 
         <div className="w-full sm:w-1/3" key="gh">
-          <LinkCard link="/projects/paint-assistant" internal center>
+          {/* <LinkCard link="/projects/paint-assistant" internal center>
             <InfoBlock
               icon={brushIcon}
               title="Paint Assistant"
               content={content}
               center
             />
-          </LinkCard>
+          </LinkCard> */}
         </div>
       </Container>
     </Layout>
