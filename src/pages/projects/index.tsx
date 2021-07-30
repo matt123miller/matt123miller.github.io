@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import Icon, { IconProps } from 'components/ui/Icon';
@@ -12,8 +11,7 @@ import TitleSection from 'components/ui/TitleSection';
 import { faBrush } from '@fortawesome/free-solid-svg-icons';
 
 const IndexPage: React.FC = () => {
-
-  const brushIcon = <Icon className={'text-white'} icon={faBrush} size="2x" />;
+  const brushIcon = <Icon className="text-white" icon={faBrush} size="2x" />;
 
   const content = `A tool to help picking colours whilst mini painting.`;
 
@@ -25,13 +23,16 @@ const IndexPage: React.FC = () => {
         <TitleSection title="Contact me" center />
 
         <div className="w-full sm:w-1/3" key="gh">
-          <LinkCard link={'/projects/paint-assistant'} internal center>
-            <InfoBlock icon={brushIcon} title="Paint Assistant" content={content} center />
+          <LinkCard link="/projects/paint-assistant" internal center>
+            <InfoBlock
+              icon={brushIcon}
+              title="Paint Assistant"
+              content={content}
+              center
+            />
           </LinkCard>
         </div>
-        
       </Container>
-
     </Layout>
   );
 };

@@ -1,12 +1,12 @@
-/// <reference path='./types.d.ts' />
+/// <reference path='./types.ts' />
 
 import React, { useState } from 'react';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 
-import PaintsList from './components/PaintsList';
-import paintData from './data';
+// import PaintsList from './components/PaintsList';
+// import paintData from './data';
 
 import './Paint.css';
 
@@ -16,7 +16,7 @@ export default function PaintMixer() {
       <SEO title="About Me" />
       <main className="paint-picker-app">
         <h1>Painting Colour Assistant</h1>
-        <PaintsList paintData={paintData} />
+        {/* <PaintsList paintData={paintData} /> */}
       </main>
     </Layout>
   );
