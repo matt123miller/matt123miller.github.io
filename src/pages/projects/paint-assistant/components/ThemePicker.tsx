@@ -1,6 +1,5 @@
-/// <reference path='../types.d.ts' />
-
 import React, { MouseEventHandler, useState } from 'react';
+import { PaintData } from '../types';
 
 export default ThemePicker;
 

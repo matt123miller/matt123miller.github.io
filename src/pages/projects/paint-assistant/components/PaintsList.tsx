@@ -1,12 +1,9 @@
-/// <reference path='../types.d.ts' />
-
 import React, { useState, Fragment } from 'react';
+import { PaintData } from '../types';
 
 import Paint from './Paint';
 import FilterButton from './FilterButton';
 import ComplimentaryColours from './ComplimentaryColours';
-
-export default PaintsList;
 
 // This should handle various data filtering
 
@@ -14,40 +11,38 @@ const sortOptions = {
   AlphabeticalAsc: true,
   AlphabeticalDesc: false,
   DarkToLight: false,
-  LightToDark: false
+  LightToDark: false,
 };
 
 const sortFunctions = {
-  AlphabeticalAsc: AlphabeticalAsc,
-  AlphabeticalDesc: AlphabeticalDesc,
-  DarkToLight: DarkToLight,
-  LightToDark: LightToDark
+  AlphabeticalAsc,
+  AlphabeticalDesc,
+  DarkToLight,
+  LightToDark,
 };
 
 type Props = {
-  paintData: PaintData
-}
+  paintData: PaintData;
+};
 
-function PaintsList(props: Props) {
+export default function PaintsList(props: Props) {
   const { paintData } = props;
 
+  // Some good custom hook candidates here
   const [chosenColour, setColour] = useState('');
   const [selectedSorts, updateSort] = useState(sortOptions);
   const [searchRegex, updateSearchText] = useState(RegExp(''));
 
   const sortChanged = (e) => {
-
-    const isChecked = (id:string) => document.getElementById(id)?.checked;
+    const isChecked = (id: string) => document.getElementById(id)?.checked;
     const updatedValues = {
       AlphabeticalAsc: isChecked('AlphabeticalAsc'),
       AlphabeticalDesc: isChecked('AlphabeticalDesc'),
       DarkToLight: isChecked('DarkToLight'),
-      LightToDark: isChecked('LightToDark')
+      LightToDark: isChecked('LightToDark'),
     };
 
-    updateSort((prevState) => {
-      return { ...prevState, ...updatedValues };
-    });
+    updateSort((prevState) => ({ ...prevState, ...updatedValues }));
   };
 
   const searchTextChanged = (e) => {
@@ -57,7 +52,9 @@ function PaintsList(props: Props) {
   };
 
   // @ts-ignore
-  const requestedSort = Object.keys(selectedSorts).find((f) => selectedSorts[f]);
+  const requestedSort = Object.keys(selectedSorts).find(
+    (f) => selectedSorts[f]
+  );
 
   // when filters are added do those first, then sort the results
 
@@ -113,30 +110,28 @@ function PaintsList(props: Props) {
       <hr />
 
       <ul className="paint-list mb-8">
-        {filteredData.map((paint, i) => {
-          return (
-            <li>
-              <Paint key={`paint${i}`} paint={paint} onPaintClick={setColour} />
-            </li>
-          );
-        })}
+        {filteredData.map((paint, i) => (
+          <li>
+            <Paint key={`paint${i}`} paint={paint} onPaintClick={setColour} />
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
 
-function AlphabeticalAsc(data: PaintData) : PaintData {
-  return data.sort((a, b) => a.name > b.name ? -1 : 1);
+function AlphabeticalAsc(data: PaintData): PaintData {
+  return data.sort((a, b) => (a.name > b.name ? -1 : 1));
 }
 
-function AlphabeticalDesc(data: PaintData) : PaintData {
-  return data.sort((a, b) => a.name < b.name ? 1 : -1);
+function AlphabeticalDesc(data: PaintData): PaintData {
+  return data.sort((a, b) => (a.name < b.name ? 1 : -1));
 }
 
-function DarkToLight(data: PaintData) : PaintData {
-  return data.sort((a, b) => a.hexCode > b.hexCode ? -1 : 1);
+function DarkToLight(data: PaintData): PaintData {
+  return data.sort((a, b) => (a.hexCode > b.hexCode ? -1 : 1));
 }
 
-function LightToDark(data: PaintData) : PaintData {
-  return data.sort((a, b) => a.hexCode < b.hexCode ? 1 : -1);
+function LightToDark(data: PaintData): PaintData {
+  return data.sort((a, b) => (a.hexCode < b.hexCode ? 1 : -1));
 }

@@ -1,13 +1,12 @@
-/// <reference path='../types.d.ts' />
-
 import React, { useState, Fragment } from 'react';
+import { PaintData } from '../types';
 
 import Paint from './Paint';
 import paintData from '../data';
 
 type Props = {
-  chosenColour: string
-}
+  chosenColour: string;
+};
 
 export default function ComplimentaryColours(props: Props) {
   const { chosenColour } = props;
@@ -18,12 +17,19 @@ export default function ComplimentaryColours(props: Props) {
   const { r, g, b } = findComplimentaryColour(colourAsRgb);
   const complimentaryColour = rgbToHex(r, g, b);
 
-  const { chosenPaint, complimentaryPaint } = findPaintsByHex(chosenColour, complimentaryColour, paintData);
+  const { chosenPaint, complimentaryPaint } = findPaintsByHex(
+    chosenColour,
+    complimentaryColour,
+    paintData
+  );
 
   return (
     <div className="complimentary-colour-container">
       {chosenPaint}
-      <ColourGradient chosenColour={chosenColour} complimentaryColour={complimentaryColour} />
+      <ColourGradient
+        chosenColour={chosenColour}
+        complimentaryColour={complimentaryColour}
+      />
       {complimentaryPaint}
     </div>
   );
@@ -31,9 +37,9 @@ export default function ComplimentaryColours(props: Props) {
 
 function ColourGradient(chosenColour, complimentaryColour) {
   const swatchStyles = {
-    background: `linear-gradient(90deg, ${chosenColour} 0%, ${chosenColour} 40%, ${complimentaryColour} 60%)`
+    background: `linear-gradient(90deg, ${chosenColour} 0%, ${chosenColour} 40%, ${complimentaryColour} 60%)`,
   };
-  return <div className="colour-swatch" style={swatchStyles}></div>;
+  return <div className="colour-swatch" style={swatchStyles} />;
 }
 
 function findPaintsByHex(chosenHex, complimentaryHex, paints) {
@@ -57,12 +63,16 @@ function findPaintsByHex(chosenHex, complimentaryHex, paints) {
     console.log(nearestRed);
   });
 
-  const chosenPaint = <Paint className="chosen" paint={foundPaint} onPaintClick={() => {}} />;
-  const complimentaryPaint = <Paint className="chosen" paint={foundPaint} onPaintClick={() => {}} />;
+  const chosenPaint = (
+    <Paint className="chosen" paint={foundPaint} onPaintClick={() => {}} />
+  );
+  const complimentaryPaint = (
+    <Paint className="chosen" paint={foundPaint} onPaintClick={() => {}} />
+  );
 
   return {
     chosenPaint,
-    complimentaryPaint
+    complimentaryPaint,
   };
 }
 
@@ -74,13 +84,18 @@ function findPaintsByHex(chosenHex, complimentaryHex, paints) {
  */
 function compareColour(a, b) {
   if (b.length == 6) {
-    var red = Math.abs(parseInt(a.substr(0, 2), 16) - parseInt(b.substr(0, 2), 16));
-    var green = Math.abs(parseInt(a.substr(2, 2), 16) - parseInt(b.substr(2, 2), 16));
-    var blue = Math.abs(parseInt(a.substr(4, 2), 16) - parseInt(b.substr(4, 2), 16));
+    const red = Math.abs(
+      parseInt(a.substr(0, 2), 16) - parseInt(b.substr(0, 2), 16)
+    );
+    const green = Math.abs(
+      parseInt(a.substr(2, 2), 16) - parseInt(b.substr(2, 2), 16)
+    );
+    const blue = Math.abs(
+      parseInt(a.substr(4, 2), 16) - parseInt(b.substr(4, 2), 16)
+    );
     return red + green + blue;
-  } else {
-    return 9999;
   }
+  return 9999;
 }
 
 /**
@@ -94,16 +109,16 @@ function findComplimentaryColour({ r, g, b }) {
   return {
     r: 255 - r,
     g: 255 - g,
-    b: 255 - b
+    b: 255 - b,
   };
 }
 
 function rgbToHex(r, g, b) {
-  return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
+  return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;
 }
 
 function componentToHex(c) {
-  var hex = c.toString(16);
+  const hex = c.toString(16);
   return hex.padStart(2, '0');
 }
 
@@ -111,6 +126,6 @@ function hexToRgb(hex) {
   return {
     r: parseInt(hex.slice(0, 2), 16),
     g: parseInt(hex.slice(2, 4), 16),
-    b: parseInt(hex.slice(4), 16)
+    b: parseInt(hex.slice(4), 16),
   };
 }

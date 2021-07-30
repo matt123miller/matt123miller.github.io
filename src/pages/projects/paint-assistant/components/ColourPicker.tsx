@@ -1,6 +1,5 @@
-/// <reference path='../types.d.ts' />
-
 import React from 'react';
+import { PaintData } from '../types';
 
 export default function ColourPicker(props) {
   const { chosenColour, setColour } = props;
@@ -12,8 +11,16 @@ export default function ColourPicker(props) {
   return (
     <div style={{ margin: '3rem' }}>
       <p>Pick your own colour</p>
-      <input type="color" name={`ColourPicker`} id={`ColourPicker`} value={chosenColour} onChange={colourChangeEvent} />
-      <span style={{ color: chosenColour, marginLeft: '1rem' }}>{chosenColour}</span>
+      <input
+        type="color"
+        name="ColourPicker"
+        id="ColourPicker"
+        value={chosenColour}
+        onChange={colourChangeEvent}
+      />
+      <span style={{ color: chosenColour, marginLeft: '1rem' }}>
+        {chosenColour}
+      </span>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-/// <reference path='./types.d.ts' />
+/// <reference path='./types.ts' />
 
 import React, { useState } from 'react';
 
