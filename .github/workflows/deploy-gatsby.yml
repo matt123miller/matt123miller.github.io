@@ -2,7 +2,7 @@ name: deploy-gatsby
 on:
   push:
     branches:
-      - base
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
