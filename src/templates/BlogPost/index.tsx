@@ -1,13 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import Container from 'components/ui/Container';
-import TitleSection from 'components/ui/TitleSection';
+import BlogTitle from 'components/ui/BlogTitle';
 import FormatHtml from 'components/utils/FormatHtml';
-
 
 interface Post {
   html: string;
@@ -31,7 +29,7 @@ interface Props {
   };
 }
 
-const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
+const BlogPost = ({ data, pageContext }: Props) => {
   const post = data.markdownRemark;
   const { previous, next } = pageContext;
 
@@ -39,7 +37,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <Container section>
-        <TitleSection title={post.frontmatter.title} />
+        <BlogTitle title={post.frontmatter.title} />
         <FormatHtml content={post.html} />
         {/* Extract following */}
         <div className="w-full flex justify-between mt-10">
