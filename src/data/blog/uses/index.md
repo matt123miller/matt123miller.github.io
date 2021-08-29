@@ -2,9 +2,9 @@
 category: "blog"
 cover: "./vscode.png"
 title: "Uses"
-description: "A summary of my setup"
+description: "A summary of what I use day to day."
 date: "2021-07-05"
-tags: ["tech"]
+tags: ["Tech"]
 published: true
 ---
 
