@@ -11,7 +11,7 @@ tags: ["Tech"]
 published: true
 ---
 
-I love food and cooking and am fond metaphor and non-technical analogies.
+I love food and cooking and am fond of metaphor and non-technical analogies.
 
 When I order food at a restaurant I look at the menu, place my order with the staff and later my food magically appears. What cookware was used? What brand of oven? Who is their supplier of salt and pepper? What knife? All unimportant details to me on the other side of the door.
 
