@@ -13,7 +13,7 @@ Having just set up a new M1 MacBook Air (loving it so far) I thought it was time
 ## Editor, Terminal, Browser etc.
 
 - [Visual Studio Code](https://code.visualstudio.com/) has been my bread and butter for maybe 5 years now, you can pry it from my cold dead hands.
-- I've customised VSC with years of settings tweaks and extensions to tailor it to my needs. [Let me know](www.twitter.com/matt123miller) if there's an extensions I should know about!
+- I've customised VSC with years of settings tweaks and extensions to tailor it to my needs. [Let me know](https://www.twitter.com/matt123miller) if there's an extensions I should know about!
 - I prefer dark themes for everything and I'm almost always using [Dracula](https://draculatheme.com/) 🧛‍♂️.
 - I use [ZSH](https://zsh.sourceforge.io/) as my shell, alongside the [Spaceship prompt](https://spaceship-prompt.sh/) which is a Rust powered prompt that provides some extra sugar.
 - I'm an annoyingly vocal [Firefox](https://www.mozilla.org/en-GB/firefox/developer/) fan 🦊, not only due to their best in class dev tools and focus on user privacy but because everything else is running on Chromium and Blink now, the web needs a competing browser engine.
