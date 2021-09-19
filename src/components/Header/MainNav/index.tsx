@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
+
+import Icon from 'components/ui/Icon';
 
 interface MainNavItem {
   title: string;
@@ -31,9 +34,9 @@ const MainNav: React.FC = () => {
   return (
     <>
       <nav
-        className={`hidden ${
-          open ? 'flex' : 'flex-col'
-        } sm:flex sm:flex-row sm:w-auto sm:order-none sm:my-0 w-full order-last my-4`}
+        className={`${
+          open ? '' : 'hidden'
+        } flex flex-col w-full order-last items-end sm:flex sm:flex-row sm:w-auto sm:order-none sm:my-0 my-4`}
       >
         {mainNavItems.map((item, index) => (
           <Link
@@ -46,8 +49,18 @@ const MainNav: React.FC = () => {
           </Link>
         ))}
       </nav>
-      <button className="sm:hidden nav-toggle" onClick={() => setOpen(!open)}>
-        <span>button</span>
+      <button
+        className="sm:hidden nav-toggle transition duration-300 ease-in-out transform hover:scale-110"
+        type="button"
+        onClick={() => setOpen(!open)}
+      >
+        <Icon
+          className={`fill-current text-pink transition ease-in-out duration-300 transform ${
+            open ? 'rotate-180' : ''
+          }`}
+          icon={faChevronCircleDown}
+          size="2x"
+        />
       </button>
     </>
   );
