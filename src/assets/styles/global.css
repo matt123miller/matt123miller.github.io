@@ -103,21 +103,6 @@ li::before {
   @apply mr-2;
 }
 
-button {
-  border-radius: 5px;
-  border: var(--dracula-orange) 2px solid;
-  padding: 0.5rem 1rem;
-}
-
-button:active,
-button.active {
-  border: var(--dracula-purple) 2px solid;
-}
-
-button + button {
-  margin-left: 2rem;
-}
-
 /* Rainbow li bullets! */
 
 li:nth-child(7n + 1)::before {
@@ -240,7 +225,7 @@ li a:hover {
 
 p a:hover::before,
 li a:hover::before {
-  background: var(--dracula-yellow);
+  background: var(--dracula-pink);
   opacity: 0.7;
 }
 
@@ -280,13 +265,13 @@ li a:hover::before {
 
 .separator-icon::before {
   content: "";
-  background-color: var(--dracula-green);
+  background-color: var(--dracula-cyan);
   @apply h-full w-px absolute left-0;
 }
 
 .separator-icon::after {
   content: "";
-  background-color: var(--dracula-purple);
+  background-color: var(--dracula-pink);
   @apply h-6 w-px absolute ml-1;
 }
 
@@ -329,11 +314,6 @@ button.nav-toggle {
   @apply: flex flex-col items-end justify-center cursor-pointer w-6 h-5;
 }
 
-button.nav-toggle span {
-  background-color: var(--dracula-purple);
-  transition: 0.2s;
-  /* @apply inline-block w-6 h-px; */
-}
 /* General content stuff */
 
 li,
