@@ -57,11 +57,12 @@ const Posts: React.FC = () => {
               tags
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fluid(maxHeight: 600, maxWidth: 800) {
                     ...GatsbyImageSharpFluid
                   }
                 }
               }
+              coverAlt
             }
           }
         }
@@ -76,9 +77,9 @@ const Posts: React.FC = () => {
     <Container section>
       <TitleSection title="BLOG" center />
       <div className="w-full flex flex-wrap">
-        {blogTags.map((t) => {
+        {/* {blogTags.map((t) => {
           // What do I do with the tags?
-        })}
+        })} */}
         {posts.map((item) => {
           const {
             id,
