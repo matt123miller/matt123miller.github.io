@@ -1,17 +1,16 @@
 import React from 'react';
 
+import Container from 'components/Container';
 import MainNav from './MainNav';
 import Logo from './Logo';
-import Container from '../ui/Container';
 
 interface Props {
   siteTitle: string;
 }
 
 const Header: React.FC<Props> = ({ siteTitle }) => (
-
   <header className="-mb-px">
-    <Container centered={true}>
+    <Container centered>
       <Logo />
       <MainNav />
     </Container>
@@ -19,7 +18,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => (
 );
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 };
 
 export default Header;

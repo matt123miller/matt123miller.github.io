@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface Props {
@@ -6,8 +5,7 @@ interface Props {
 }
 
 const Separator: React.FC<Props> = ({ center }) => (
-  <div className={`separator-icon ${center && 'mx-auto'}`}>
-  </div>
+  <div className={`separator-icon ${center && 'mx-auto'}`} />
 );
 
 export default Separator;

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Icon, { IconProps } from 'components/ui/Icon';
+import Icon, { IconProps } from 'components/Icon';
 
 import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 

@@ -8,11 +8,13 @@ tags: ["D&D"]
 published: true
 ---
 
+![Image of some metallic blue dice inside a walnut box with pale blue resin filling gaps.](./dice-box.jpeg "My favourite dice and their custom box, courtesy of my friend.")
+
 _You leave the cavern full of Kobolds behind, none the wiser to your presence. Creeping into the inner lair of the beast a treasure of information awaits you. The cave walls are covered in the glistening shapes of letters, snippets of the Draconic Prophecy. Arranged in a seemingly random pattern in the centre of the room are a series of tables. Upon each is something resembling chess boards, though formed of hexagonal shapes. Each board has wildly different pieces though. Most are foreign to you but with some investigationg a few grab your eyes, what you recognise as miniature figurines of yourselves. Suddenly an arrogant voice reverberates around the chamber._
 
 _"It would appear you've seen too much" drawls Dormenghast, the enormous green dragon that calls this place home._
 
-**For 3 years now I've been enjoying the resurgence of Dungeons & Dragons (dnd)**
+For 3 years now I've been enjoying the resurgence of Dungeons & Dragons (dnd).
 
 This has reignited my love for this hobby and what it can do. What started as running a fortnightly game for colleagues at a previous job has evolved to the point where I now play or run multiple games a week. And that was before the world got turned upside down in early 2020. The importance of having a social and creative outlet such as dnd has become even more apparent for myself and countless others who are taking this opportunity to investigate what this is all about.
 

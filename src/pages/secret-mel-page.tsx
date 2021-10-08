@@ -2,8 +2,8 @@
 import React, { useLayoutEffect } from "react";
 
 import Layout from "components/Layout";
-import Container from "components/ui/Container";
-import TitleSection from "components/ui/TitleSection";
+import Container from "components/Container";
+import TitleSection from "components/TitleSection";
 
 const MyWorkPage: React.FC = () => {
   const numberDetails = {

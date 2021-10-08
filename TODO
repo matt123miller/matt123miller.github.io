@@ -24,6 +24,7 @@ Blog pages:
     ☐ Responsive
   ✔ General content CSS @done(21-04-08 15:22)
     ☐ Fix wide page issue
+  ☐ Add image attribution. Make a component? Or pop it in markdown? I dunno.
 
 Components:
   ☐ Kent C Dodds has a good typescript functional component post. Move away from React.FC.
