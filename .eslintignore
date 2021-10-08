@@ -1,0 +1,15 @@
+# dotenv environment variable files
+.env*
+
+# gatsby and tooling dotfiles
+.cache/
+public
+postcss.config.js
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+gatsby-ssr.js
+tailwind.config.js
+
+# node files
+node_modules

@@ -1,8 +1,8 @@
 import React from 'react';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import Container from 'components/ui/Container';
-import Icon from 'components/ui/Icon';
+import Container from 'components/Container';
+import Icon from 'components/Icon';
 
 import { links } from '../../data/Constants';
 

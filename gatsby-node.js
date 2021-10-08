@@ -6,7 +6,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       modules: [path.resolve(__dirname, `src`), `node_modules`],
       fallback: {
-        path: require.resolve("path-browserify"),
+        path: require.resolve('path-browserify'),
       },
     },
   });

@@ -1,12 +1,15 @@
 ---
 category: "blog"
-cover: "./vscode.png"
+cover: "./desk.jpg"
+coverAlt: "Image of my desk, comprising my macbook, 2 screens, a keyboard and various clutter"
 title: "Uses"
 description: "A summary of what I use day to day."
 date: "2021-07-05"
 tags: ["Tech"]
 published: true
 ---
+
+![Image of my desk, comprising my macbook, 2 screens, a keyboard and various clutter](./desk.jpg "My desk")
 
 Having just set up a new M1 MacBook Air (loving it so far) I thought it was time I created this page summarising the various things I use day to day. These things have slowly changed over time during my career and will change again in the future.
 
