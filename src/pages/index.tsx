@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import HeroBanner from 'components/HeroBanner';
-import Services from 'components/ui/WhatIDo';
+import Services from 'components/WhatIDo';
 
 const IndexPage: React.FC = () => (
   <Layout>

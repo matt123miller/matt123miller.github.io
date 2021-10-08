@@ -3,8 +3,8 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
-import Container from 'components/ui/Container';
-import BlogTitle from 'components/ui/BlogTitle';
+import Container from 'components/Container';
+import BlogTitle from 'components/BlogTitle';
 import FormatHtml from 'components/utils/FormatHtml';
 
 interface Post {

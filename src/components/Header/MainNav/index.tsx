@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
-import Icon from 'components/ui/Icon';
+import Icon from 'components/Icon';
 
 interface MainNavItem {
   title: string;

@@ -2,11 +2,11 @@ import React from 'react';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
-import Icon, { IconProps } from 'components/ui/Icon';
-import LinkCard from 'components/ui/LinkCard';
-import InfoBlock from 'components/ui/InfoBlock';
-import Container from 'components/ui/Container';
-import TitleSection from 'components/ui/TitleSection';
+import Icon, { IconProps } from 'components/Icon';
+import LinkCard from 'components/LinkCard';
+import InfoBlock from 'components/InfoBlock';
+import Container from 'components/Container';
+import TitleSection from 'components/TitleSection';
 
 import { faBrush } from '@fortawesome/free-solid-svg-icons';
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import Container from 'components/ui/Container';
-import TitleSection from 'components/ui/TitleSection';
-import LinkCard from 'components/ui/LinkCard';
+import Container from 'components/Container';
+import TitleSection from 'components/TitleSection';
+import LinkCard from 'components/LinkCard';
 import { blogTags } from 'data/Constants';
 import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
 
