@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Icon, { IconProps } from 'components/Icon';
-
-import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import Icon from 'components/Icon';
 
 interface Props {
   center?: boolean;

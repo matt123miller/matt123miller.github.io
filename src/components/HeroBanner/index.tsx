@@ -9,17 +9,12 @@ interface SectionHeroBanner extends SectionTitle {
   linkText: string;
 }
 
-const HeroBanner: React.FC = () => {
-  
-  return (
-    <div className="max-w-screen-md w-full mx-auto p-5 mt-8">
-      <h1 id="name_title" className="text-center">
-
-        hello world h1
-      
-      </h1>
-    </div>
-  )
-};
+const HeroBanner: React.FC = () => (
+  <div className="max-w-screen-md w-full mx-auto p-5 mt-8">
+    <h1 id="name_title" className="text-center">
+      hello world h1
+    </h1>
+  </div>
+);
 
 export default HeroBanner;
