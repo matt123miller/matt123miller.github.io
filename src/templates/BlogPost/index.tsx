@@ -58,14 +58,18 @@ const BlogPost = ({ data, pageContext }: Props) => {
         <div className="w-full flex justify-between mt-10">
           <span>
             {previous && (
-              <Link to={previous.fields.slug} rel="previous">
+              <Link
+                to={previous.fields.slug}
+                rel="previous"
+                className="animated-link"
+              >
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </span>
           <span>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.slug} rel="next" className="animated-link">
                 {next.frontmatter.title} →
               </Link>
             )}

@@ -36,9 +36,9 @@ const MainNav: React.FC = () => {
       <nav
         className={`${
           open ? '' : 'hidden'
-        } flex flex-col w-full order-last items-end sm:flex sm:flex-row sm:w-auto sm:order-none sm:my-0 my-4`}
+        } flex flex-col w-full order-last items-end sm:flex sm:flex-row sm:w-auto sm:order-none my-0`}
       >
-        {mainNavItems.map((item, index) => (
+        {mainNavItems.map((item: MainNavItem, index) => (
           <Link
             className="main-nav-item animated-link text-xl"
             key={`nav-item-${index}`}

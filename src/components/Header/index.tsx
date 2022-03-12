@@ -10,7 +10,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ siteTitle }) => (
   <header className="-mb-px">
-    <Container centered>
+    <Container centered className="border-b-2 sm:border-b-0">
       <Logo />
       <MainNav />
     </Container>
