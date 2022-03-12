@@ -4,11 +4,11 @@ interface Props {
   content: string;
 }
 
-const FormatHtml: React.FC<Props> = ({ content }) => (
+const FormatHtml = ({ content }: Props) => (
   <div
     className="format-html text-content-container"
     dangerouslySetInnerHTML={{
-      __html: content
+      __html: content,
     }}
   />
 );

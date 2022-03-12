@@ -5,17 +5,14 @@ interface Props {
   link: string;
   internal?: Boolean;
   center?: Boolean;
+  children?: any;
 }
 
-const LinkCard: React.FC<Props> = ({ link, children, internal, center }) => {
+const LinkCard = ({ link, children, internal, center }: Props) => {
   if (internal) {
     return (
       <Link to={link}>
-        <div
-          className={`link-card-content card-hover ${
-            center ? 'items-center' : ''
-          }`}
-        >
+        <div className={`link-card-content ${center ? 'items-center' : ''}`}>
           {children}
         </div>
       </Link>
@@ -24,11 +21,7 @@ const LinkCard: React.FC<Props> = ({ link, children, internal, center }) => {
 
   return (
     <a className="mr-2" href={link} rel="noreferrer noopener" target="_blank">
-      <div
-        className={`link-card-content card-hover ${
-          center ? 'items-center' : ''
-        }`}
-      >
+      <div className={`link-card-content ${center ? 'items-center' : ''}`}>
         {children}
       </div>
     </a>
