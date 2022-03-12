@@ -193,42 +193,6 @@ li:nth-child(7n)::before {
 
 /* fancy link effects */
 
-/* Effects for main content links */
-
-p a,
-li a {
-  --rotate: -2deg;
-  --scaleX: 1;
-  position: relative;
-  color: var(--dracula-cyan);
-}
-
-p a::before,
-li a::before {
-  height: 4px;
-  position: absolute;
-  background: var(--dracula-cyan);
-  opacity: 0.4;
-  content: "";
-  width: 100%;
-  bottom: -4px;
-  z-index: -1;
-  transition: transform 0.3s ease 0s;
-  transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX));
-}
-
-p a:hover,
-li a:hover {
-  --rotate: 1deg;
-  --scaleX: 1.1;
-}
-
-p a:hover::before,
-li a:hover::before {
-  background: var(--dracula-pink);
-  opacity: 0.7;
-}
-
 /* Effects for nav links */
 
 .animated-link:not(.active) {
