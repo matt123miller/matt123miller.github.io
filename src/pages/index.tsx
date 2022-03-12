@@ -3,8 +3,6 @@ import { Link } from 'gatsby';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
-import HeroBanner from 'components/HeroBanner';
-import Services from 'components/WhatIDo';
 
 const IndexPage: React.FC = () => (
   <Layout>
@@ -22,7 +20,9 @@ const IndexPage: React.FC = () => (
       </p>
       <p>
         You can read my thoughts about all these things{' '}
-        <Link to="/blog">on my blog</Link>
+        <Link to="/blog" className="animated-link">
+          on my blog
+        </Link>
       </p>
     </div>
   </Layout>

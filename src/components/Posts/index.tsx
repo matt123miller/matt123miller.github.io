@@ -29,7 +29,7 @@ interface Post {
 }
 
 const Posts: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(gatsbyQuery());
+  const { markdownRemark, allMarkdownRemark } = useStaticQuery(gatsbyQuery);
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
   const posts: Post[] = allMarkdownRemark.edges;
@@ -81,47 +81,45 @@ const Posts: React.FC = () => {
   );
 };
 
-function gatsbyQuery(): any {
-  return graphql`
-    query {
-      markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
-        frontmatter {
-          title
-          subtitle
-        }
+const gatsbyQuery = graphql`
+  query {
+    markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
+      frontmatter {
+        title
+        subtitle
       }
-      allMarkdownRemark(
-        filter: {
-          frontmatter: { category: { eq: "blog" }, published: { eq: true } }
-        }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            html
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              description
-              date(formatString: "MMM DD, YYYY")
-              tags
-              cover {
-                childImageSharp {
-                  fluid(maxHeight: 600, maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
+    }
+    allMarkdownRemark(
+      filter: {
+        frontmatter: { category: { eq: "blog" }, published: { eq: true } }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          html
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            date(formatString: "MMM DD, YYYY")
+            tags
+            cover {
+              childImageSharp {
+                fluid(maxHeight: 600, maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
                 }
               }
-              coverAlt
             }
+            coverAlt
           }
         }
       }
     }
-  `;
-}
+  }
+`;
 
 export default Posts;

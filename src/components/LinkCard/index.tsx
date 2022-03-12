@@ -5,7 +5,7 @@ interface Props {
   link: string;
   internal?: Boolean;
   center?: Boolean;
-  children?: ReactChildren;
+  children?: any;
 }
 
 const LinkCard = ({ link, children, internal, center }: Props) => {
