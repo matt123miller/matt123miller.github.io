@@ -10,11 +10,14 @@ Blog Posts:
   ☐ What is an env file
   ✘ The ordeal of installing imagemagick on my system - https://linuxconfig.org/how-to-install-imagemagick-7-on-ubuntu-18-04-linux @cancelled(21-04-30 13:51)
   ☐ gitkraken and windows terminal alt + t
+  ☐ dnd page template and stat block 
+    ☐ make into react component. But then I need MDX? 
+    - Probably only do this once I've got 3 different stat blocks??
 
 Template tidy up:
   ☐ Remove styled components
     ☐ The Timeline component needs doing 
-  ☐ Remove skills, sergivse, testimonials and all that junk
+  ☐ Remove skills, services, testimonials and all that junk
 
 Blog pages:
   ✔ blog snippets?. @done(21-04-08 15:23)
