@@ -9,6 +9,8 @@ import BlogTitle from 'components/BlogTitle';
 import FormatHtml from 'components/utils/FormatHtml';
 import { ImageSharpFluid } from 'helpers/definitions';
 
+// import 'assets/styles/dnd.css';
+
 interface Post {
   html: string;
   fields: {
