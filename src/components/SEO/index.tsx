@@ -39,7 +39,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang // helps screen readers use an english accent
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -66,7 +66,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: site.siteMetadata.twitterUrl
         },
         {
           name: `twitter:title`,
@@ -82,7 +82,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
 };
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `en`, // helps screen readers use an english accent
   meta: [] as Meta[],
   description: ``
 };

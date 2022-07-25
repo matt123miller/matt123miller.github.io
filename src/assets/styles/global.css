@@ -324,3 +324,13 @@ p + p {
 
   @apply italic my-2 p-5;
 }
+
+h2.markdown-heading-underline {
+  @apply text-3xl py-2 pl-4 underline;
+  text-decoration-color: var(--dracula-cyan);
+}
+
+h3.markdown-heading-underline {
+  @apply text-2xl py-2 pl-4 underline;
+  text-decoration-color: var(--dracula-cyan);
+}
