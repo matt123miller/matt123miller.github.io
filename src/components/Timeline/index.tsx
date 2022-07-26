@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
   title: string;
   subtitle: string;
+  url: string;
   content: React.ReactNode;
   startDate: string;
   endDate: string;
@@ -11,6 +12,7 @@ interface Props {
 const Timeline: React.FC<Props> = ({
   title,
   subtitle,
+  url,
   content,
   startDate,
   endDate,
@@ -18,7 +20,9 @@ const Timeline: React.FC<Props> = ({
   <div className="timeline sm:flex-row">
     <span className="point" />
     <div className="w-full sm:w-1/3">
-      <h2 className="font-semibold">{title}</h2>
+      <h2 className="font-semibold">
+        <a href={url}>{title}</a>
+      </h2>
       <hr className="hidden sm:block sm:mr-4" />
       <p>{subtitle}</p>
       <p>

@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 interface Props {
-  content: string;
+  content: string | ReactNode;
 }
 
 const FormatHtml = ({ content }: Props) => (

@@ -8,13 +8,14 @@ import FormatHtml from "components/utils/FormatHtml";
 
 import { SectionTitle } from "helpers/definitions";
 
-interface Experience {
+interface ExperienceNode {
   node: {
     id: string;
     html: React.ReactNode;
     frontmatter: {
       company: string;
       position: string;
+      url: string;
       startDate: string;
       endDate: string;
     };
@@ -41,6 +42,7 @@ const Experience: React.FC = () => {
             frontmatter {
               company
               position
+              url
               startDate
               endDate
             }
@@ -51,7 +53,7 @@ const Experience: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const experiences: Experience[] = allMarkdownRemark.edges;
+  const experiences: ExperienceNode[] = allMarkdownRemark.edges;
 
   return (
     <Container section centered className="pl-0">
@@ -61,7 +63,7 @@ const Experience: React.FC = () => {
         const {
           id,
           html,
-          frontmatter: { company, position, startDate, endDate },
+          frontmatter: { company, position, url, startDate, endDate },
         } = item.node;
 
         return (
@@ -69,6 +71,7 @@ const Experience: React.FC = () => {
             key={id}
             title={company}
             subtitle={position}
+            url={url}
             content={<FormatHtml content={html} />}
             startDate={startDate}
             endDate={endDate}
