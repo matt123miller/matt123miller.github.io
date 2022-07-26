@@ -1,12 +1,12 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Timeline from 'components/Timeline';
-import Container from 'components/Container';
-import TitleSection from 'components/TitleSection';
-import FormatHtml from 'components/utils/FormatHtml';
+import Timeline from "components/Timeline";
+import Container from "components/Container";
+import TitleSection from "components/TitleSection";
+import FormatHtml from "components/utils/FormatHtml";
 
-import { SectionTitle } from 'helpers/definitions';
+import { SectionTitle } from "helpers/definitions";
 
 interface Education {
   node: {
@@ -54,14 +54,14 @@ const Education: React.FC = () => {
   const education: Education[] = allMarkdownRemark.edges;
 
   return (
-    <Container section>
+    <Container section className="pl-0">
       <TitleSection title={sectionTitle.title} />
 
       {education.map((item) => {
         const {
           id,
           html,
-          frontmatter: { university, degree, startDate, endDate }
+          frontmatter: { university, degree, startDate, endDate },
         } = item.node;
 
         return (

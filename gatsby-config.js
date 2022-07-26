@@ -1,8 +1,11 @@
+const {links} = require('./constants')
+
 module.exports = {
   siteMetadata: {
     title: `Matt Miller`,
     description: `My personal site`,
     author: `Matt Miller`,
+    twitterUrl: links.twitter,
   },
   plugins: [
     `gatsby-plugin-typescript`,

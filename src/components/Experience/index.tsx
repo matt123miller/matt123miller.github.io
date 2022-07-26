@@ -1,12 +1,12 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Timeline from 'components/Timeline';
-import Container from 'components/Container';
-import TitleSection from 'components/TitleSection';
-import FormatHtml from 'components/utils/FormatHtml';
+import Timeline from "components/Timeline";
+import Container from "components/Container";
+import TitleSection from "components/TitleSection";
+import FormatHtml from "components/utils/FormatHtml";
 
-import { SectionTitle } from 'helpers/definitions';
+import { SectionTitle } from "helpers/definitions";
 
 interface Experience {
   node: {
@@ -54,14 +54,14 @@ const Experience: React.FC = () => {
   const experiences: Experience[] = allMarkdownRemark.edges;
 
   return (
-    <Container section>
-      <TitleSection title={sectionTitle.title}/>
+    <Container section centered className="pl-0">
+      <TitleSection title={sectionTitle.title} />
 
       {experiences.map((item) => {
         const {
           id,
           html,
-          frontmatter: { company, position, startDate, endDate }
+          frontmatter: { company, position, startDate, endDate },
         } = item.node;
 
         return (
