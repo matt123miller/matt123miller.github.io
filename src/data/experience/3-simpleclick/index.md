@@ -1,12 +1,13 @@
 ---
 category: "experiences"
 company: "Simpleclick"
+url: "https://www.simpleclick.co.uk"
 position: "Fullstack Developer"
 startDate: "Mar 2019"
 endDate: "August 2021"
 ---
 
-I worked as a fullstack developer making websites and other web powered services for a range of local and national clients. My work focused on improving and maintaining our CMS product, Doddle. This included working on core modules that all Doddle sites share and client specific modules for more bespoke functionality.
+I worked as a fullstack developer making websites and other web powered services for a range of local and national clients. My work focused on improving and maintaining our CMS product, Doddle. This included working on core modules that all Doddle sites share and client specific modules for more bespoke client functionality.
 
 I worked on many interesting client projects during my time at SimpleClick, not all of which I can talk about 🤫.
 
@@ -14,7 +15,7 @@ But some client projects I can discuss were:
 
 <h3 class="text-xl pt-2 markdown-heading-underline">Fred Olsen Cruise Lines</h3>
 
-Many projects over the 2.5 year period, including:
+Many highlights over the 2.5 year period, including:
 
 - Improving their [user facing sales site](https://www.fredolsencruises.com/).
 - Creating bespoke CMS functionality inside of Doddle
