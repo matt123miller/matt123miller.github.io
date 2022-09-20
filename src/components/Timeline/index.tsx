@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface Props {
   title: string;
@@ -9,14 +9,7 @@ interface Props {
   endDate: string;
 }
 
-const Timeline: React.FC<Props> = ({
-  title,
-  subtitle,
-  url,
-  content,
-  startDate,
-  endDate,
-}) => (
+const Timeline: React.FC<Props> = ({ title, subtitle, url, content, startDate, endDate }) => (
   <div className="timeline sm:flex-row">
     <span className="point" />
     <div className="w-full sm:w-1/3">
