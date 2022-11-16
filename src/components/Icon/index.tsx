@@ -6,6 +6,7 @@ import {
   faTwitter,
   faTwitch,
   faGithub,
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faLaptopCode,
@@ -29,6 +30,7 @@ library.add(
   faTwitch,
   faTwitter,
   faGithub,
+  faLinkedin,
   faLaptopCode,
   faDrawPolygon,
   faEdit,
