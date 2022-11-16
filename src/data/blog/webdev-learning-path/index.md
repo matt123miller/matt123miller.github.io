@@ -22,13 +22,13 @@ A website is made of HyperText Markup Language - <abbr title="HyperText Markup L
 
 <abbr title="HyperText Markup Language">HTML</abbr> is the skeleton of your webpage. It says there's a skull here, collar bone, ribs here, pelvis, legs, then feet bones.
 
-<abbr title="Cascading Style Sheets">CSS</abbr> is the skin, clothing and whatnot. This changes how your webpage and it's structure looks to users.
+<abbr title="Cascading Style Sheets">CSS</abbr> is the skin, clothing and whatnot. This changes how your webpage looks to users by building upon that intial structure.
 
-<abbr title="JavaScript">JS</abbr> is like the muscles. It makes the body do things and move around, react to user behaviour.
+<abbr title="JavaScript">JS</abbr> is like the muscles. It makes the body do things and move around, reacting to user behaviour.
 
 Not every website or webpage needs <abbr title="JavaScript">JS</abbr>. Every page needs <abbr title="HyperText Markup Language">HTML</abbr>. <abbr title="Cascading Style Sheets">CSS</abbr> makes that <abbr title="HyperText Markup Language">HTML</abbr> easier and more pleasurable for users to read and ideally every page wants at least a little <abbr title="Cascading Style Sheets">CSS</abbr>.
 
-I'd make start with a simple webpage. If you're looking for ideas click the <a href="https://en.wikipedia.org/wiki/Special:Random" class="animated-link">Random Article button on Wikipedia</a> and try to recreate the page content. For example I just got a random <a href="https://en.wikipedia.org/wiki/Marc_Fesneau" class="animated-link">French politician I've never heard of</a>.
+I'd start with a simple webpage of text content. If you're looking for ideas click the <a href="https://en.wikipedia.org/wiki/Special:Random" class="animated-link">Random Article button on Wikipedia</a> and try to recreate the page content. For example I just got a random <a href="https://en.wikipedia.org/wiki/Marc_Fesneau" class="animated-link">French politician I've never heard of</a>.
 
 You may be presented with a page that is more or less complicated than this. But here's how I break down Marc's page. The same can be done for any web page with a little practice and I've drawn boxes around parts of the page to break it down.
 
@@ -36,13 +36,15 @@ You may be presented with a page that is more or less complicated than this. But
 
 Try and recreate the part inside the red box.
 
-Then try creating a the part inside the blue box.
+Then try creating the part inside the blue box.
 
-They don't have to look layout next to eachother like in the screenshot, it doesn't need to respond to different browser window sizes, dw about mobile etc.
+They don't have to neatly layout next to each other like in the screenshot, it doesn't need to respond to different browser window sizes, forget about other screen sizes for now.
 
-You can do that with only a single index.html file (that's what we normally name the first html file) and view it in the browser directly. file:///C:/Users/YOUR_USER/code/first-webpage/index.html . Adjust as appropriate.
+You can do that with only a single index.html file (that's what we normally name the first html file) and view it in the browser directly. On Wdinows that might look like this file:///C:/Users/YOUR_USER/code/first-webpage/index.html. Adjust as appropriate.
 
-And if you're hitting a dead end you can try inspecting the webpage. Open your <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"  class="animated-link">browser dev tools</a>, likely press F12, and get ready to be overwhelemed. Every web page can be viewed using these tools and you can discover how they were made. It's gotten harder due to how modern <abbr title="Cascading Style Sheets">CSS</abbr> and <abbr title="JavaScript">JS</abbr> developer tooling but if you have patience there's a lot to learn by inspecting the content of different websites. For more information
+And if you're hitting a dead end you can try inspecting the webpage. Open your <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"  class="animated-link">browser dev tools</a> and get ready to be overwhelemed. Every web page can be viewed using these tools and you can discover how they were made. It's gotten harder due to how complex modern <abbr title="Cascading Style Sheets">CSS</abbr> and <abbr title="JavaScript">JS</abbr> developer tooling has become but if you have patience there's a lot to learn by inspecting the content of different websites.
+
+For more information <a href="" class="animated-link">MDN</a> has everything you need to know.
 
 ## Back End
 
@@ -56,10 +58,10 @@ In your language of choice look up how to make a simple webserver. In Nodejs jus
 
 Start with 1 route that returns <abbr title="JavaScript Object Notation">JSON</abbr>.
 
-Then multiple routes that return different <abbr title="JavaScript Object Notation">JSON</abbr> each.
+Then multiple routes that each return different <abbr title="JavaScript Object Notation">JSON</abbr>.
 
-Then a route that you provide arguments to. Look up GET parameters in your webserver framework docs.
+Then a route that you provide arguments to. Look up GET parameters in your webserver framework docs and how to parse them.
 
-Maybe the backend code can deliver the website of your front end? Then instead of using the file protocol file:///file_path etc you can visit http://localhost:3000 or whatever the port your backend is listening to.
+Maybe your little backend can deliver the website of your front end? Then instead of using the file protocol file:///file_path etc you can visit http://localhost:3000 or whatever the port your backend is listening to.
 
 The intro tutorial to the webserver you chose will take you through all this probbaly. <a href="http://expressjs.com/en/starter/installing.html" class="animated-link">Here's the one for express</a> but as I said pick whatever one is appropriate for whatever language you feel comfortable in.
