@@ -13,13 +13,17 @@ import {
 
 import { links } from 'data/Constants';
 
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGithub,
+  faTwitter,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const ContactInfo: React.FC = () => {
   const github = <Icon className="text-white" icon={faGithub} size="2x" />;
   const twitter = <Icon className="text-white" icon={faTwitter} size="2x" />;
-  const email = <Icon className="text-white" icon={faPaperPlane} size="2x" />;
+  const linkedin = <Icon className="text-white" icon={faLinkedin} size="2x" />;
 
   return (
     <Container section>
@@ -47,11 +51,22 @@ const ContactInfo: React.FC = () => {
         </LinkCard>
       </div>
 
-      <div className="w-full sm:w-1/3" key="email">
-        <LinkCard link={`mailto:${links.email}`} center>
-          <InfoBlock icon={email} title="Email" content={links.email} center />
+      <div className="w-full sm:w-1/3" key="linkedin">
+        <LinkCard link={links.linkedin} center>
+          <InfoBlock
+            icon={linkedin}
+            title="Linkedin"
+            content="@matt123miller"
+            center
+          />
         </LinkCard>
       </div>
+
+      {/* <div className="w-full sm:w-1/3" key="email">
+        <LinkCard link={`mailto:${links.email}`} center>
+          <InfoBlock icon={linkedin} title="Email" content={links.email} center />
+        </LinkCard>
+      </div> */}
     </Container>
   );
 };
