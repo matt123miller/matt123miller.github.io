@@ -1,0 +1,21 @@
+---
+interface Props {
+  siteTitle: string;
+}
+
+import Container from "../Container/index.astro";
+---
+
+<header class="-mb-px">
+  <Container centered class="border-b-2 sm:border-b-0">
+    {
+      /* <Logo />
+      <MainNav /> */
+    }
+    <nav
+      class="flex flex-col w-full order-last items-end sm:flex sm:flex-row sm:w-auto sm:order-none my-0"
+    >
+      <a href="">a</a><a href="">b</a><a href="">c</a>
+    </nav>
+  </Container>
+</header>

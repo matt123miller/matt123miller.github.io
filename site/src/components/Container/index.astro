@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string;
+  centered?: Boolean;
+  section?: Boolean;
+}
+const { class: className, centered, section } = Astro.props;
+
+const classes = [
+  "flex flex-wrap max-w-screen-md w-full mx-auto p-5",
+  className,
+  centered ? "items-center" : "",
+  section ? "py-8 sm:py-16" : "",
+];
+---
+
+<div class:list={classes}><slot /></div>;
