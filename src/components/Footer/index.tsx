@@ -14,7 +14,7 @@ const Footer: React.FC = () => (
         <a
           className="mx-2 animated-link"
           href={links.github}
-          rel="noreferrer noopener"
+          rel="me"
           target="_blank"
         >
           GitHub
@@ -23,10 +23,18 @@ const Footer: React.FC = () => (
         <a
           className="mx-2 animated-link"
           href={links.twitter}
-          rel="noreferrer noopener"
+          rel="me"
           target="_blank"
         >
           Twitter
+        </a>
+        <a 
+           className="mx-2 animated-link" 
+           href="https://hachyderm.io/@m11r" 
+           rel="me" 
+           target="_blank"
+        >
+          Mastodon
         </a>
       </div>
     </Container>
