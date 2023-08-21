@@ -1,6 +1,8 @@
 ---
-import Header from "components/Header/index.astro";
+import "../public/styles.scss";
+
 import Footer from "components/Footer/index.astro";
+import Header from "components/Header/index.astro";
 export interface Props {
   title: string;
 }
@@ -18,7 +20,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div>
+    <!-- Is this wrapping div necessary? -->
+    <div id="page-wrapper">
       <Header siteTitle={"hello world"} />
       <main class="flex flex-col main-content-container">
         <slot />
@@ -28,21 +31,58 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  /* purgecss start ignore */
+  @import "tailwindcss/base";
+  @import "tailwindcss/components";
+  /* purgecss end ignore */
+
+  @import "tailwindcss/utilities";
   :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
+    --linear-text-gradient: linear-gradient(
       45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
+      var(--dracula-purple),
+      var(--dracula-pink) 30%,
+      var(--dracula-foreground) 60%
     );
+    --default-animation-transition: 0.15s linear;
+    /* Colours */
+    --dracula-background: #282a36;
+    --dracula-foreground: #f8f8f2;
+    --dracula-selection: #44475a;
+    --dracula-comment: #6272a4;
+    --dracula-red: #ff5555;
+    --dracula-orange: #ffb86c;
+    --dracula-yellow: #f1fa8c;
+    --dracula-green: #50fa7b;
+    --dracula-purple: #bd93f9;
+    --dracula-cyan: #8be9fd;
+    --dracula-pink: #ff79c6;
   }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
+
+  /* TODO: Not purging css during dev, allows adding new classes in browser. 
+Move the purge end below the tailwind imports for release   */
+
+  body {
+    --default-animation-transition: 0.15s linear;
+    /* Colours */
+    --dracula-background: #282a36;
+    --dracula-foreground: #f8f8f2;
+    --dracula-selection: #44475a;
+    --dracula-comment: #6272a4;
+    --dracula-red: #ff5555;
+    --dracula-orange: #ffb86c;
+    --dracula-yellow: #f1fa8c;
+    --dracula-green: #50fa7b;
+    --dracula-purple: #bd93f9;
+    --dracula-cyan: #8be9fd;
+    --dracula-pink: #ff79c6;
   }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+
+  body {
+    font-size: 14px;
+    color: var(--dracula-foreground);
+
+    background-color: var(--dracula-background);
+    user-select: var(--dracula-selection);
   }
 </style>

@@ -1,6 +1,5 @@
 ---
 import Container from "components/Container/index.astro";
-import { Github } from "components/Icons";
 
 import { links } from "@/constants";
 ---
@@ -8,8 +7,6 @@ import { links } from "@/constants";
 <footer>
   <Container>
     <div class="flex items-center justify-center w-full">
-      <!-- <Icon icon={faGithub} size="2x" /> -->
-      <Github />
       <a
         class="mx-2 animated-link"
         href={links.github}
@@ -18,7 +15,6 @@ import { links } from "@/constants";
       >
         GitHub
       </a>
-      <!-- <Icon class="ml-5" icon={faTwitter} size="2x" /> -->
       <a
         class="mx-2 animated-link"
         href={links.twitter}
