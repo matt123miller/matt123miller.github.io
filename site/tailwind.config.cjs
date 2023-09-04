@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 2s linear infinite",
+        "lerp-colour": "lerp-colour",
+        "spin-logo": "lerp-colour, spin 2s linear infinite",
+      },
+    },
   },
   plugins: [],
 };
