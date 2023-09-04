@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+
+import profileImage from "@/assets/images/Matt_miller_portrait_optimised.jpg";
+
+interface MainNavItem {
+  title: string;
+  slug: string;
+}
+
+const mainNavItems: MainNavItem[] = [
+  {
+    title: "Blog",
+    slug: "/blog/",
+  },
+  {
+    title: "My Work",
+    slug: "/experience/",
+  },
+  {
+    title: "Uses",
+    slug: "/blog/uses",
+  },
+  {
+    title: "Contact Me",
+    slug: "/contact/",
+  },
+];
+
+// Come back to the mobile nav, for now always show
+const open = false;
+---
+
+
+<a class="flex items-center mr-auto" href="/">
+  <figure class="w-16 h-16 mr-3 rounded-full logo-image overflow-hidden hover:animate-spin-logo">
+    <Image src={profileImage} width={64} height={64} alt="A stylised image of myself drawn by Charli Vince www.charlivince.com"/> 
+  </figure>
+  <h1 class="text-xl animated-link">Matt Miller</h1>
+</a>
+<nav
+  class:list={[
+    {
+      hidden: open,
+    },
+    "flex flex-col w-full sm:flex sm:flex-row sm:w-auto sm:order-none my-0",
+  ]}
+>
+  {
+    mainNavItems.map((item: MainNavItem, index) => (
+      <a class="main-nav-item animated-link text-xl" href={item.slug}>
+        {item.title}
+      </a>
+    ))
+  }
+</nav>

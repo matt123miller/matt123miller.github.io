@@ -1,8 +1,8 @@
-import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { Link, graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
 
-import { ImageSharpFluid } from 'helpers/definitions';
+import { ImageSharpFluid } from "helpers/definitions";
 
 const Logo: React.FC = () => {
   const { site, placeholderImage } = useStaticQuery(graphql`
@@ -36,7 +36,7 @@ const Logo: React.FC = () => {
           alt={logoTitle}
         />
       </figure>
-      <h1 className="text-lg animated-link text-xl">Matt Miller</h1>
+      <h1 className="text-lg animated-link">Matt Miller</h1>
     </Link>
   );
 };
