@@ -1,24 +1,18 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
-import LinkCard from "components/LinkCard";
-import InfoBlock from "components/InfoBlock";
-import Container from "components/Container";
-import TitleSection from "components/TitleSection";
-import Icon, { IconProps } from "@/components/Icons/gatsby";
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
+import Container from "@/components/Container";
+import Icon from "@/components/Icons/gatsby";
+import InfoBlock from "@/components/InfoBlock";
+import LinkCard from "@/components/LinkCard";
+import TitleSection from "@/components/TitleSection";
 
 import { links } from "@/Constants";
 
 import {
   faGithub,
-  faTwitter,
   faLinkedin,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const ContactInfo: React.FC = () => {
   const github = <Icon className="text-white" icon={faGithub} size="2x" />;

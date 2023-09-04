@@ -1,10 +1,10 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
-import Timeline from "components/Timeline";
-import Container from "components/Container";
-import TitleSection from "components/TitleSection";
-import FormatHtml from "components/utils/FormatHtml";
+import Container from "@/components/Container";
+import Timeline from "@/components/Timeline";
+import TitleSection from "@/components/TitleSection";
+import FormatHtml from "@/components/utils/FormatHtml";
 
 import { SectionTitle } from "helpers/definitions";
 

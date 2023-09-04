@@ -1,12 +1,11 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import React from "react";
 
-import Container from "components/Container";
-import TitleSection from "components/TitleSection";
-import LinkCard from "components/LinkCard";
-import { blogTags } from "@/Constants";
-import { SectionTitle, ImageSharpFluid } from "helpers/definitions";
+import Container from "@/components/Container";
+import LinkCard from "@/components/LinkCard";
+import TitleSection from "@/components/TitleSection";
+import { ImageSharpFluid, SectionTitle } from "helpers/definitions";
 
 interface Post {
   node: {
