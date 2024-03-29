@@ -158,19 +158,19 @@ div#page-wrapper > main {
 
 /* Effects for nav links */
 
-.animated-link:not(.active) {
+a:not(.active) {
   color: var(--dracula-cyan);
   position: relative;
   text-decoration: none;
   transition: 0.5s;
 }
 
-.animated-link:hover:not(.active) {
+a:hover:not(.active) {
   transition: right 0.2s cubic-bezier(0, 0.5, 0, 1),
     border-color 0.2s ease-out;
 }
 
-.animated-link:not(.active)::after {
+a:not(.active)::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -183,7 +183,7 @@ div#page-wrapper > main {
   transform-origin: right;
 }
 
-.animated-link:not(.active):hover::after {
+a:not(.active):hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
