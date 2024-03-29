@@ -9,7 +9,6 @@ module.exports = {
         "spin-logo": "lerp-colour, spin 2s linear infinite",
       },
       typography: ({ theme }) => {
-        console.log(theme("colors.cyan"));
         return {
           dracula: {
             css: {

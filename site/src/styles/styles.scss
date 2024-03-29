@@ -154,38 +154,48 @@ div#page-wrapper > main {
   border-bottom: 2px solid var(--dracula-pink);
 }
 
-/* fancy link effects */
+/* Links CSS */
 
 /* Effects for nav links */
 
-a:not(.active) {
+a {
   color: var(--dracula-cyan);
   position: relative;
-  text-decoration: none;
-  transition: 0.5s;
+  text-decoration: underline;
 }
 
-a:hover:not(.active) {
-  transition: right 0.2s cubic-bezier(0, 0.5, 0, 1),
+a.animated-link {
+
+  &:not(.active) {
+    color: var(--dracula-cyan);
+    position: relative;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  &:hover:not(.active) {
+    transition: right 0.2s cubic-bezier(0, 0.5, 0, 1),
     border-color 0.2s ease-out;
-}
+  }
 
-a:not(.active)::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  top: 100%;
-  left: 0;
-  background: var(--dracula-cyan);
-  transition: transform 0.5s;
-  transform: scaleX(0);
-  transform-origin: right;
-}
+  &:not(.active)::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: var(--dracula-cyan);
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
 
-a:not(.active):hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+  &:not(.active):hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
 }
 
 /** Icon stuff */

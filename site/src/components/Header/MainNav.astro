@@ -31,12 +31,18 @@ const mainNavItems: MainNavItem[] = [
 const open = false;
 ---
 
-
-<a class="flex items-center mr-auto" href="/">
-  <figure class="w-16 h-16 mr-3 rounded-full logo-image overflow-hidden hover:animate-spin-logo">
-    <Image src={profileImage} width={64} height={64} alt="A stylised image of myself drawn by Charli Vince www.charlivince.com"/> 
+<a class="flex items-center mr-auto no-animation" href="/">
+  <figure
+    class="w-16 h-16 mr-3 rounded-full logo-image overflow-hidden hover:animate-spin-logo"
+  >
+    <Image
+      src={profileImage}
+      width={64}
+      height={64}
+      alt="A stylised image of myself drawn by Charli Vince www.charlivince.com"
+    />
   </figure>
-  <h1 class="text-xl animated-link">Matt Miller</h1>
+  <h1 class="text-xl">Matt Miller</h1>
 </a>
 <nav
   class:list={[
