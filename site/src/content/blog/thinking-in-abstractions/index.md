@@ -1,12 +1,12 @@
 ---
 category: "blog"
-cover: "./lily-banse-food-cover.jpg"
-coverAttribution:
-  'Photo by <a href="https://unsplash.com/@lvnatikk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lily Banse</a> on <a href="https://unsplash.com/s/photos/restaurant-menu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  '
+coverImage:
+  src: "./lily-banse-food-cover.jpg"
+  alt: ""
+  attribution: 'Photo by <a href="https://unsplash.com/@lvnatikk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lily Banse</a> on <a href="https://unsplash.com/s/photos/restaurant-menu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
 title: "Thinking In Abstractions"
 description: "We rely on abstractions in the everyday world. We create more when writing code so be thoughtful about them."
-date: "2021-08-29"
+date: 2021-08-29
 tags: ["Tech"]
 published: true
 ---

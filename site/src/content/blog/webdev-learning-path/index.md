@@ -1,14 +1,17 @@
 ---
-category: 'blog'
-cover: './cover-image.png'
-title: 'Learning Practical Web Development'
+category: "blog"
+coverImage:
+  src: "./cover-image.png"
+  alt: ""
+  attribution: ""
+title: "Learning Practical Web Development"
 description: "When asked how to start learning web development recently here's what I responded."
-date: '2022-11-15'
-tags: ['Tech']
+date: 2022-11-15
+tags: ["Tech"]
 published: true
 ---
 
-![Image of a webpage being inspected using the browser dev tools. Learn the dev tools! They're so useful.](./cover-image.png 'The browser dev tools are my daily bread and butter')
+![Image of a webpage being inspected using the browser dev tools. Learn the dev tools! They're so useful.](./cover-image.png "The browser dev tools are my daily bread and butter")
 
 I was recently asked over Discord how to start learning web development. Despite our field becoming increasingly complicated as we chase increasingly more specific goals and technolgy features the basics are becoming easier and easier to learn. The following post is an almost verbatim copy of what I responded to that question asker. It's not a tutorial about <abbr title="HyperText Markup Language">HTML</abbr> or <abbr title="JavaScript">JS</abbr>. It's a suggested series of tasks to do to help learn things in a practical manner.
 
@@ -32,7 +35,7 @@ I'd start with a simple webpage of text content. If you're looking for ideas cli
 
 You may be presented with a page that is more or less complicated than this. But here's how I break down Marc's page. The same can be done for any web page with a little practice and I've drawn boxes around parts of the page to break it down.
 
-![The wikipedia page of French politician Marc Fresneau. It has 2 coloured squares annotating it to select portions of the web page relevant to the following text](./marc-fesneau.png 'Marc Fesneau, French politician')
+![The wikipedia page of French politician Marc Fresneau. It has 2 coloured squares annotating it to select portions of the web page relevant to the following text](./marc-fesneau.png "Marc Fesneau, French politician")
 
 Try and recreate the part inside the red box.
 

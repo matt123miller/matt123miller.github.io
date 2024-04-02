@@ -1,9 +1,12 @@
 ---
 category: "blog"
-cover: "./dice-box.jpeg"
+coverImage:
+  src: "./dice-box.jpeg"
+  alt: ""
+  attribution: ""
 title: "Treasure Golem"
 description: "A fun challenge hiding in a treasure hoard."
-date: "2022-03-24"
+date: 2022-03-24
 tags: ["D&D"]
 published: false
 ---

@@ -1,10 +1,13 @@
 ---
 category: "blog"
-cover: "./desk.jpg"
+coverImage:
+  src: "./desk.jpg"
+  alt: ""
+  attribution: ""
 coverAlt: "Image of my desk, comprising my macbook, 2 screens, a keyboard and various clutter"
 title: "Uses"
 description: "A summary of what I use day to day."
-date: "2021-07-05"
+date: 2021-07-05
 tags: ["Tech"]
 published: true
 ---

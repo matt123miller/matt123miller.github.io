@@ -1,9 +1,12 @@
 ---
 category: "blog"
-cover: "./dice-box.jpeg"
+coverImage:
+  src: "./dice-box.jpeg"
+  alt: "An image of dice"
+  attribution: "Myself, they're my dice"
 title: "D&D&Me"
 description: "What D&D means to me and why it should matter to you"
-date: "2021-04-21"
+date: 2021-04-21
 tags: ["D&D"]
 published: true
 ---
