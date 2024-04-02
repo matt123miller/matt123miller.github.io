@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+
+// import TitleSection from "@/components//index.astro";
+import Container from "@/components/Container/index.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const blogEntries = await getCollection("blog");
+const pages = blogEntries.map((entry) => {
+  return {
+    slug: entry.slug,
+    title: entry.data.title,
+    date: entry.data.date,
+    coverImage: entry.data.coverImage,
+  };
+});
+---
+
+<Layout title={"Blog"}>
+  <Container section>
+    <!-- <TitleSection title="BLOG" center /> -->
+    <div class="flex flex-col w-full">
+      <h2>Blog</h2>
+    </div>
+    <div class="w-full flex flex-wrap">
+      This is the front page of the blog
+      <ul>
+        {
+          pages.map((page) => (
+            <li>
+              <a href={`/blog/${page.slug}`}>{page.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Container></Layout
+>
