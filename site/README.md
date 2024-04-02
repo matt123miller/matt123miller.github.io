@@ -1,20 +1,14 @@
-# Astro Starter Kit: Basics
+# matt123miller.dev
 
-```
-npm create astro@latest -- --template basics
-```
+This is my personal site, a content focused Astro site.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+I'm trying to follow the commit guidelines detailed in the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) which mostly follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. My ammendments are the following:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
+- `content: <description>`
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+This project has the following structure and files.
 
 ```
 /
@@ -23,12 +17,18 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── src/
 │   ├── components/
 │   │   └── Card.astro
+│   ├── content/
+│   │   └── config.ts
+│   │   └── blog/
+│   │       └── A folder for each blog post
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
+
+## Rest of the Astro starter readme
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
