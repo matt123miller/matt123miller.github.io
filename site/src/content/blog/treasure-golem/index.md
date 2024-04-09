@@ -1,9 +1,9 @@
 ---
 category: "blog"
 coverImage:
-  src: "./dice-box.jpeg"
-  alt: ""
-  attribution: ""
+  src: "./coin-golem.jpg"
+  alt: "A coin golem"
+  attribution: "?"
 title: "Treasure Golem"
 description: "A fun challenge hiding in a treasure hoard."
 date: 2022-03-24

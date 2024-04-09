@@ -1,17 +1,26 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 // import TitleSection from "@/components//index.astro";
 import Container from "@/components/Container/index.astro";
+import LinkCard from "@/components/LinkCard/index.astro";
 import Layout from "@/layouts/Layout.astro";
 
-const blogEntries = await getCollection("blog");
+const blogEntries = await getCollection("blog", (page) => {
+  if (page.data.includeInList === false) {
+    return false;
+  }
+  return true;
+});
 const pages = blogEntries.map((entry) => {
   return {
     slug: entry.slug,
     title: entry.data.title,
     date: entry.data.date,
+    description: entry.data.description,
     coverImage: entry.data.coverImage,
+    tags: entry.data.tags,
   };
 });
 ---
