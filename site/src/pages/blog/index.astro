@@ -32,16 +32,32 @@ const pages = blogEntries.map((entry) => {
       <h2>Blog</h2>
     </div>
     <div class="w-full flex flex-wrap">
-      This is the front page of the blog
-      <ul>
-        {
-          pages.map((page) => (
-            <li>
-              <a href={`/blog/${page.slug}`}>{page.title}</a>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        pages.map((page) => (
+          <div class="w-full sm:w-1/2 p-3">
+            <LinkCard link={`/blog/${page.slug}`}>
+              {page.coverImage && (
+                <figure class="w-full my-0">
+                  <Image
+                    class="blog-preview-image"
+                    src={page.coverImage.src}
+                    alt={page.coverImage.alt}
+                  />
+                </figure>
+              )}
+              <div class="p-4">
+                <h3 class="font-semibold mb-4 mt-0">{page.title}</h3>
+                <p>{page.description}</p>
+              </div>
+              <div class="p-4 pt-2 mt-auto">
+                {page.tags.map((tag) => (
+                  <span class="text-xs rounded-full px-2 py-1 mr-2">{tag}</span>
+                ))}
+              </div>
+            </LinkCard>
+          </div>
+        ))
+      }
     </div>
-  </Container></Layout
->
+  </Container>
+</Layout>
