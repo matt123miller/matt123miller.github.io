@@ -11,6 +11,8 @@ tags: ["D&D"]
 published: false
 ---
 
+# Treasure Golem - A Fun Encounter Players Won't Expect
+
 ![alt text](./coin-golem.jpg "hover text")
 
 After daydreaming the concept I recently unleashed this idea on my players. The specific mechanics were thrown together on the spot but everyone had a good time. The treasure golem is a rewarding encounter for it's theme and spectacle, not it's mechanical depth. However it has a few tricks up it's sleeve.

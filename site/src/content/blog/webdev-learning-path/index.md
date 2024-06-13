@@ -11,6 +11,8 @@ tags: ["Tech"]
 published: true
 ---
 
+# An Opinionated Suggestion For Learning Simple Web Development
+
 ![Image of a webpage being inspected using the browser dev tools. Learn the dev tools! They're so useful.](./cover-image.png "The browser dev tools are my daily bread and butter")
 
 I was recently asked over Discord how to start learning web development. Despite our field becoming increasingly complicated as we chase increasingly more specific goals and technolgy features the basics are becoming easier and easier to learn. The following post is an almost verbatim copy of what I responded to that question asker. It's not a tutorial about <abbr title="HyperText Markup Language">HTML</abbr> or <abbr title="JavaScript">JS</abbr>. It's a suggested series of tasks to do to help learn things in a practical manner.

@@ -12,7 +12,6 @@ const { link, center, showUnderline } = Astro.props;
   class:list={["mr-2", { "no-underline": !showUnderline }]}
   href={link}
   rel="noreferrer noopener"
-  target="_blank"
 >
   <div class={`link-card-content ${center ? "items-center" : ""}`}>
     <slot />

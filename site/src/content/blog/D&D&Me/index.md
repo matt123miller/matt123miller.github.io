@@ -11,6 +11,8 @@ tags: ["D&D"]
 published: true
 ---
 
+# D&D&ME
+
 ![Image of some metallic blue dice inside a walnut box with pale blue resin filling gaps.](./dice-box.jpeg "My favourite dice and their custom box, courtesy of my friend.")
 
 _You leave the cavern full of Kobolds behind, none the wiser to your presence. Creeping into the inner lair of the beast a treasure of information awaits you. The cave walls are covered in the glistening shapes of letters, snippets of the Draconic Prophecy. Arranged in a seemingly random pattern in the centre of the room are a series of tables. Upon each is something resembling chess boards, though formed of hexagonal shapes. Each board has wildly different pieces though. Most are foreign to you but with some investigationg a few grab your eyes, what you recognise as miniature figurines of yourselves. Suddenly an arrogant voice reverberates around the chamber._

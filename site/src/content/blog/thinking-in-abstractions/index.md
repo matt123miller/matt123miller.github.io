@@ -11,6 +11,8 @@ tags: ["Tech"]
 published: true
 ---
 
+# Thinking In Abstractions
+
 ![Image of 3 dishes of fishcakes, sliced beef salad and something brown. By Lily Banse.](./lily-banse-food-cover.jpg "Image by Lily Banse")
 
 I love food and cooking and am fond of metaphor and non-technical analogies.

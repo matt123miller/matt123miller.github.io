@@ -22,4 +22,8 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title}> <Content /></Layout>
+<Layout title={entry.data.title}>
+  <div class="max-w-screen-md w-full mx-auto p-5 mt-8">
+    <Content />
+  </div>
+</Layout>
