@@ -4,14 +4,12 @@ coverImage:
   src: "./coin-golem.jpg"
   alt: "A coin golem"
   attribution: "?"
-title: "Treasure Golem"
+title: "Treasure Golem - A Fun Encounter Players Won't Expect"
 description: "A fun challenge hiding in a treasure hoard."
 date: 2022-03-24
 tags: ["D&D"]
 published: false
 ---
-
-# Treasure Golem - A Fun Encounter Players Won't Expect
 
 ![alt text](./coin-golem.jpg "hover text")
 

@@ -4,14 +4,12 @@ coverImage:
   src: "./cover-image.png"
   alt: ""
   attribution: ""
-title: "Learning Practical Web Development"
+title: "An Opinionated Suggestion For Learning Simple Web Development"
 description: "When asked how to start learning web development recently here's what I responded."
 date: 2022-11-15
 tags: ["Tech"]
 published: true
 ---
-
-# An Opinionated Suggestion For Learning Simple Web Development
 
 ![Image of a webpage being inspected using the browser dev tools. Learn the dev tools! They're so useful.](./cover-image.png "The browser dev tools are my daily bread and butter")
 

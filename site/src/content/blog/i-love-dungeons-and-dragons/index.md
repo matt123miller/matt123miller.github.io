@@ -4,14 +4,12 @@ coverImage:
   src: "./dice-box.jpeg"
   alt: "An image of dice"
   attribution: "Myself, they're my dice"
-title: "D&D&Me"
+title: "I Love Dungeons & Dragons"
 description: "What D&D means to me and why it should matter to you"
 date: 2021-04-21
 tags: ["D&D"]
 published: true
 ---
-
-# D&D&ME
 
 ![Image of some metallic blue dice inside a walnut box with pale blue resin filling gaps.](./dice-box.jpeg "My favourite dice and their custom box, courtesy of my friend.")
 

@@ -11,10 +11,6 @@ export async function getStaticPaths() {
     };
   });
 
-  // pages.push([
-  //   slug: undefined,
-  //   title: 'Blog',
-  // ])
   return pages;
 }
 
@@ -24,6 +20,9 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
   <div class="max-w-screen-md w-full mx-auto p-5 mt-8">
+    <h1>{entry.data.title}</h1>
+    <span class="text-purple">{entry.data.date.toLocaleDateString()}</span>
+    <span>{entry.data.tags.join(", ")}</span>
     <Content />
   </div>
 </Layout>
