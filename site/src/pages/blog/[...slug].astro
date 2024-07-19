@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+
+import Badge from "@/components/Badge/index.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -22,7 +24,7 @@ const { Content } = await entry.render();
   <div class="max-w-screen-md w-full mx-auto p-5 mt-8">
     <h1>{entry.data.title}</h1>
     <span class="text-purple">{entry.data.date.toLocaleDateString()}</span>
-    <span>{entry.data.tags.join(", ")}</span>
+    {entry.data.tags.map((tag) => <Badge class="ml-4">{tag}</Badge>)}
     <Content />
   </div>
 </Layout>
