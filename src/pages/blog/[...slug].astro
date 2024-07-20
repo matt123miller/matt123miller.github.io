@@ -5,6 +5,8 @@ import { getCollection } from "astro:content";
 // import { resolve } from "node:path";
 
 import Badge from "@/components/Badge/index.astro";
+import ExternalLink from "@/components/Icons/ExternalLink.astro";
+import { links } from "@/constants";
 import Layout from "../../layouts/Layout.astro";
 
 // async function parse_dir_recursive(dir) {
@@ -25,16 +27,21 @@ export async function getStaticPaths() {
 
   const blogEntries = await getCollection("blog");
   const pages = blogEntries.map((entry) => {
+    // Can replace main with your development branch if needed.
+    const editUrl = `${links.siteRepo}/tree/main/src/content/blog/${entry.id}`;
     return {
       params: { slug: entry.slug },
-      props: { entry, editUrl: "" },
+      props: {
+        entry,
+        editUrl,
+      },
     };
   });
 
   return pages;
 }
 
-const { entry } = Astro.props;
+const { entry, editUrl } = Astro.props;
 const { Content } = await entry.render();
 ---
 
@@ -47,12 +54,12 @@ const { Content } = await entry.render();
         {entry.data.date.toLocaleDateString()}
       </span>
       <a
-        class="animated-link external"
-        href="https://github.com/matt123miller/matt123miller.dev"
+        class="animated-link external not-prose"
+        href={editUrl}
         rel="me"
         target="_blank"
       >
-        Edit this page on github
+        Edit this page on github<ExternalLink />
       </a>
     </div>
     <Content />
