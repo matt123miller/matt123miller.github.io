@@ -7,7 +7,7 @@ coverImage:
 title: "Thinking In Abstractions"
 description: "We rely on abstractions in the everyday world. We create more when writing code so be thoughtful about them."
 date: 2021-08-29
-tags: ["Tech"]
+tags: ["Tech", "Code"]
 published: true
 ---
 

@@ -23,8 +23,12 @@ const { Content } = await entry.render();
 <Layout title={entry.data.title}>
   <div class="max-w-screen-md w-full mx-auto p-5 mt-8">
     <h1>{entry.data.title}</h1>
-    <span class="text-purple">{entry.data.date.toLocaleDateString()}</span>
-    {entry.data.tags.map((tag) => <Badge class="ml-4">{tag}</Badge>)}
+    <div>
+      {entry.data.tags.map((tag) => <Badge class="mr-4">{tag}</Badge>)}
+      <span class="text-comment pt-1"
+        >{entry.data.date.toLocaleDateString()}</span
+      >
+    </div>
     <Content />
   </div>
 </Layout>

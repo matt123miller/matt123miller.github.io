@@ -7,7 +7,7 @@ coverImage:
 title: "Treasure Golem - A Fun Encounter Players Won't Expect"
 description: "A fun challenge hiding in a treasure hoard."
 date: 2022-03-24
-tags: ["D&D"]
+tags: ["D&D", "DM"]
 published: false
 ---
 
@@ -15,7 +15,7 @@ published: false
 
 After daydreaming the concept I recently unleashed this idea on my players. The specific mechanics were thrown together on the spot but everyone had a good time. The treasure golem is a rewarding encounter for it's theme and spectacle, not it's mechanical depth. However it has a few tricks up it's sleeve.
 
-This could be used as a the primary or final means of defence. If it's the primary foe in a location then you could make it more difficult or complex mechanically. If it's the final enemy after a long slog through a dungeon or following a dragon fight then perhaps tone down the difficulty for a weakened party. the story of the battle will be just as rewarding as the treasure itself. I include some suggested alterations at the end.
+This could be used as a the primary or final means of defence. If it's the primary foe in a location then you could make it more difficult or complex mechanically. If it's the final enemy after a long slog through a dungeon or following a dragon fight then perhaps tone down the difficulty for a weakened party. The story of the battle will be just as rewarding as the treasure itself. I include some suggested alterations at the end.
 
 - Sandman from Spiderman
 - cone attack that applies slow

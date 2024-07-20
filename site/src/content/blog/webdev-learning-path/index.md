@@ -7,7 +7,7 @@ coverImage:
 title: "An Opinionated Suggestion For Learning Simple Web Development"
 description: "When asked how to start learning web development recently here's what I responded."
 date: 2022-11-15
-tags: ["Tech", "Teaching"]
+tags: ["Tech", "Teaching", "Code"]
 published: true
 ---
 
