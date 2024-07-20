@@ -2,26 +2,57 @@
 import Container from "@/components/Container/index.astro";
 
 import { links } from "@/constants";
+import ExternalLinkIcon from "../Icons/ExternalLink.astro";
 ---
 
 <footer>
   <Container>
+    <div class="text-center w-full text-comment pb-4">
+      This whole site is open source on
+      <a
+        class="animated-link"
+        href="https://github.com/matt123miller/matt123miller.dev"
+        rel="me"
+        target="_blank"
+      >
+        GitHub<ExternalLinkIcon /></a
+      >, feel free to propose changes, learn from me or teach me, it's MIT
+      licensed.
+    </div>
     <div class="flex items-center justify-center w-full">
       <a
-        class="mx-2 animated-link"
+        class="mx-2 animated-link external"
         href={links.github}
-        rel="noreferrer noopener"
+        rel="me"
         target="_blank"
       >
-        GitHub
+        GitHub<ExternalLinkIcon />
       </a>
       <a
-        class="mx-2 animated-link"
+        class="mx-2 animated-link external"
         href={links.twitter}
-        rel="noreferrer noopener"
+        rel="me"
+        target="_blank"
+        title="I will never call it X"
+      >
+        Twitter<ExternalLinkIcon />
+      </a>
+      <a
+        class="mx-2 animated-link external"
+        href={links.mastodon}
+        rel="me"
         target="_blank"
       >
-        Twitter
+        Mastodon<ExternalLinkIcon />
+      </a>
+      <a
+        class="mx-2 animated-link external"
+        href={links.linkedin}
+        rel="me"
+        target="_blank"
+        title="Hire me"
+      >
+        Linkedin<ExternalLinkIcon />
       </a>
     </div>
   </Container>

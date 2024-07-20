@@ -27,11 +27,11 @@ div#page-wrapper > main {
 }
 
 // Keeping footer at the bottom using technique from here https://moderncss.dev/keep-the-footer-at-the-bottom-flexbox-vs-grid/
-  div#page-wrapper > footer {
-    margin-top: auto;
-    border-top: 2px solid var(--dracula-selection);
-    @apply py-4;
-  } 
+div#page-wrapper > footer {
+  margin-top: auto;
+  border-top: 2px solid var(--dracula-selection);
+  @apply py-4;
+}
 
 /* Elements */
 
@@ -165,7 +165,6 @@ a {
 }
 
 a.animated-link {
-
   &:not(.active) {
     color: var(--dracula-cyan);
     position: relative;
@@ -175,7 +174,7 @@ a.animated-link {
 
   &:hover:not(.active) {
     transition: right 0.2s cubic-bezier(0, 0.5, 0, 1),
-    border-color 0.2s ease-out;
+      border-color 0.2s ease-out;
   }
 
   &:not(.active)::after {
@@ -195,8 +194,18 @@ a.animated-link {
     transform: scaleX(1);
     transform-origin: left;
   }
-
 }
+
+// .external::after {
+//   background-color: white;
+//   content: "";
+//   display: inline-flex;
+//   height: 10px;
+//   width: 10px;
+//   margin-left: 4px;
+//   mask-size: cover;
+//   mask-image: url(/icon-external-link.svg);
+// }
 
 /** Icon stuff */
 
@@ -284,7 +293,8 @@ p + p {
   @apply mt-4;
 }
 
-.format-html {}
+.format-html {
+}
 
 .text-content-container {
   font-size: 1rem;
