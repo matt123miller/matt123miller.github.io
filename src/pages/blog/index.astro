@@ -7,12 +7,7 @@ import Container from "@/components/Container/index.astro";
 import LinkCard from "@/components/LinkCard/index.astro";
 import Layout from "@/layouts/Layout.astro";
 
-const blogEntries = await getCollection("blog", (page) => {
-  if (page.data.includeInList === false) {
-    return false;
-  }
-  return true;
-});
+const blogEntries = await getCollection("blog", (page) => page.data.published);
 const pages = blogEntries.map((entry) => {
   return {
     slug: entry.slug,

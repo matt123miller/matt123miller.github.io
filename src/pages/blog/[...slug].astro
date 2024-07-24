@@ -1,31 +1,16 @@
 ---
 import { getCollection } from "astro:content";
-// import {} from 'astro:'
-// import { promises as fs } from "node:fs";
-// import { resolve } from "node:path";
 
 import Badge from "@/components/Badge/index.astro";
 import ExternalLink from "@/components/Icons/ExternalLink.astro";
 import { links } from "@/constants";
 import Layout from "../../layouts/Layout.astro";
 
-// async function parse_dir_recursive(dir) {
-//   const subdirs = await fs.readdir(dir);
-//   const files = await Promise.all(
-//     subdirs.map(async (subdir) => {
-//       const res = resolve(dir, subdir);
-//       return (await fs.stat(res)).isDirectory()
-//         ? parse_dir_recursive(res)
-//         : res;
-//     })
-//   );
-//   return files.reduce((a, f) => a.concat(f), []);
-// }
-
 export async function getStaticPaths() {
-  // console.log(import.meta.dirname);
-
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection(
+    "blog",
+    (page) => page.data.published
+  );
   const pages = blogEntries.map((entry) => {
     // Can replace main with your development branch if needed.
     const editUrl = `${links.siteRepo}/tree/main/src/content/blog/${entry.id}`;

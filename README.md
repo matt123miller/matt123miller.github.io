@@ -51,6 +51,8 @@ All commands are run from the root of the project, from a terminal:
 
 ## TODO list
 
+- 404 page
+- content meta for sharing
 - [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
 - [Better vercel integration](https://vercel.com/docs/frameworks/astro)
 - Replace `sharp` with vercel image service

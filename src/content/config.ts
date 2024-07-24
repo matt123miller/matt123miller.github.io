@@ -5,7 +5,6 @@ const blogCollection = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
-      includeInList: z.boolean().optional(),
       coverImage: z
         .object({
           src: image(),
