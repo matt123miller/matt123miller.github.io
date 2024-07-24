@@ -1,4 +1,4 @@
-import { description, name } from "./package";
+import packageJson from "../package.json" assert { type: "json" };
 
 const baseUrl = "https://matt123miller.dev";
 const github = "https://github.com/matt123miller";
@@ -20,6 +20,6 @@ export const links = {
 
 export default {
   links,
-  description,
-  name,
+  description: packageJson.description,
+  name: packageJson.name,
 };
