@@ -1,0 +1,19 @@
+---
+interface Props {
+  link: string;
+  showUnderline?: Boolean;
+  center?: Boolean;
+}
+
+const { link, center, showUnderline } = Astro.props;
+---
+
+<a
+  class:list={["mr-2", { "no-underline": !showUnderline }]}
+  href={link}
+  rel="noreferrer noopener"
+>
+  <div class={`link-card-content ${center ? "items-center" : ""}`}>
+    <slot />
+  </div>
+</a>

@@ -1,0 +1,79 @@
+---
+import "../styles/styles.scss";
+
+import Footer from "@/components/Footer/index.astro";
+import Header from "@/components/Header/index.astro";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-background selection:text-selection">
+    <div id="page-wrapper">
+      <Header siteTitle={"hello world"} />
+      <main
+        class="flex flex-col max-w-full main-content-container prose prose-dracula"
+      >
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+<style is:global>
+  /* purgecss start ignore */
+  @import "tailwindcss/base";
+  @import "tailwindcss/components";
+  /* purgecss end ignore */
+
+  @import "tailwindcss/utilities";
+  :root {
+    /* 
+    Dracula colours in HSL in the format Tailwind expects to use them in tailwind.config.js 
+    */
+    --tw-dracula-background: 231 15% 18%;
+    --tw-dracula-foreground: 60 30% 96%;
+    --tw-dracula-selection: 232 14% 31%;
+    --tw-dracula-comment: 225 27% 51%;
+    --tw-dracula-red: 0 100% 67%;
+    --tw-dracula-orange: 31 100% 71%;
+    --tw-dracula-yellow: 65 92% 76%;
+    --tw-dracula-green: 135 94% 65%;
+    --tw-dracula-purple: 265 89% 78%;
+    --tw-dracula-cyan: 191 97% 77%;
+    --tw-dracula-pink: 326 100% 74%;
+
+    /** Dracula colours for easier consumption elsewhere */
+    --dracula-background: #282a36;
+    --dracula-foreground: #f8f8f2;
+    --dracula-selection: #44475a;
+    --dracula-comment: #6272a4;
+    --dracula-red: #ff5555;
+    --dracula-orange: #ffb86c;
+    --dracula-yellow: #f1fa8c;
+    --dracula-green: #50fa7b;
+    --dracula-purple: #bd93f9;
+    --dracula-cyan: #8be9fd;
+    --dracula-pink: #ff79c6;
+
+    /** Other things */
+    --linear-text-gradient: linear-gradient(
+      45deg,
+      var(--dracula-purple),
+      var(--dracula-pink) 30%,
+      var(--dracula-foreground) 60%
+    );
+    --default-animation-transition: 0.15s linear;
+  }
+</style>

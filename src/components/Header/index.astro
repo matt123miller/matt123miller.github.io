@@ -1,0 +1,18 @@
+---
+import Container from "../Container/index.astro";
+import MainNav from "./MainNav.astro";
+
+interface Props {
+  siteTitle: string;
+}
+---
+
+<header class="-mb-px">
+  <Container centered class="border-b-2 sm:border-b-0">
+    {
+      /* <Logo />
+       */
+    }
+    <MainNav />
+  </Container>
+</header>

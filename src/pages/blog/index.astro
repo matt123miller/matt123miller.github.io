@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import Badge from "@/components/Badge/index.astro";
+import Container from "@/components/Container/index.astro";
+import LinkCard from "@/components/LinkCard/index.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const blogEntries = await getCollection("blog", (page) => {
+  if (page.data.includeInList === false) {
+    return false;
+  }
+  return true;
+});
+const pages = blogEntries.map((entry) => {
+  return {
+    slug: entry.slug,
+    title: entry.data.title,
+    date: entry.data.date,
+    description: entry.data.description,
+    coverImage: entry.data.coverImage,
+    tags: entry.data.tags,
+  };
+});
+---
+
+<Layout title={"Blog"}>
+  <Container section>
+    <div class="flex flex-col w-full">
+      <h2>Blog</h2>
+    </div>
+    <div class="w-full flex flex-wrap">
+      {
+        pages.map((page) => (
+          <div class="w-full sm:w-1/2 p-2">
+            <LinkCard link={`/blog/${page.slug}`}>
+              {page.coverImage && (
+                <figure class="w-full my-0">
+                  <Image
+                    class="blog-preview-image"
+                    src={page.coverImage.src}
+                    alt={page.coverImage.alt}
+                  />
+                </figure>
+              )}
+              <div class="p-4 pb-0">
+                <h3 class="font-semibold mb-4 mt-0">{page.title}</h3>
+                <p class="mb-0">{page.description}</p>
+              </div>
+              <div class="p-4 mt-auto">
+                {page.tags.map((tag) => (
+                  <Badge class="mr-2">{tag}</Badge>
+                ))}
+              </div>
+            </LinkCard>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

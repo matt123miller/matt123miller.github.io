@@ -1,0 +1,15 @@
+---
+interface Props {
+  class?: string;
+  colour?: string;
+}
+const { class: className, colour } = Astro.props;
+
+const classes = [
+  "inline-flex items-center rounded-full px-2 py-1 not-prose text-xs font-medium bg-comment",
+  colour ? `text-${colour}` : "text-orange",
+  className,
+];
+---
+
+<span class:list={classes}><slot /></span>
