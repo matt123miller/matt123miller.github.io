@@ -53,3 +53,4 @@ All commands are run from the root of the project, from a terminal:
 
 - [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
 - [Better vercel integration](https://vercel.com/docs/frameworks/astro)
+- Replace `sharp` with vercel image service
