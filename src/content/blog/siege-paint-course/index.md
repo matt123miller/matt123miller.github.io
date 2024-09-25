@@ -8,7 +8,7 @@ title: "Siege Studios Essentials Masterclass 2 Review"
 description: "My first painting class experience"
 date: 2024-09-25
 tags: ["painting", "warhammer", "miniatures"]
-published: false
+published: true
 ---
 
 I attended my first painting class last week, this one provided by [Siege Studios](https://siegestudios.co.uk/). I've been painting minis for the last 5 years in my dwindling free time and found my abilities plateauing. James, the owner of Siege, taught the class himself and was a fantastic teacher that was able to connect with us and explain concepts in various ways to help students understand.
