@@ -2,15 +2,14 @@
 import { getCollection } from "astro:content";
 
 import Badge from "@/components/Badge/index.astro";
+import FormattedDate from "@/components/FormattedDate/index.astro";
 import ExternalLink from "@/components/Icons/ExternalLink.astro";
 import { links } from "@/constants";
+import { isPublishedCheck } from "@/utils/isPublishedCheck";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection(
-    "blog",
-    (page) => page.data.published
-  );
+  const blogEntries = await getCollection("blog", isPublishedCheck);
   const pages = blogEntries.map((entry) => {
     // Can replace main with your development branch if needed.
     const editUrl = `${links.siteRepo}/tree/main/src/content/blog/${entry.id}`;
@@ -36,7 +35,8 @@ const { Content } = await entry.render();
     <div>
       {entry.data.tags.map((tag) => <Badge class="mr-4">{tag}</Badge>)}
       <span class="text-comment pt-1 mr-4">
-        {entry.data.date.toLocaleDateString()}
+        <!-- {entry.data.date.toLocaleDateString()} -->
+        <FormattedDate date={entry.data.date} />
       </span>
       <a
         class="animated-link external not-prose"

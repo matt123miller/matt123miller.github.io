@@ -6,18 +6,23 @@ import Badge from "@/components/Badge/index.astro";
 import Container from "@/components/Container/index.astro";
 import LinkCard from "@/components/LinkCard/index.astro";
 import Layout from "@/layouts/Layout.astro";
+import { isPublishedCheck } from "@/utils/isPublishedCheck";
 
-const blogEntries = await getCollection("blog", (page) => page.data.published);
-const pages = blogEntries.map((entry) => {
-  return {
-    slug: entry.slug,
-    title: entry.data.title,
-    date: entry.data.date,
-    description: entry.data.description,
-    coverImage: entry.data.coverImage,
-    tags: entry.data.tags,
-  };
-});
+const blogEntries = await getCollection("blog", isPublishedCheck);
+const pages = blogEntries
+  .map((entry) => {
+    return {
+      slug: entry.slug,
+      title: entry.data.title,
+      date: entry.data.date,
+      description: entry.data.description,
+      coverImage: entry.data.coverImage,
+      tags: entry.data.tags,
+    };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+
+console.log(pages.map((p) => p.date.toLocaleDateString()));
 ---
 
 <Layout title={"Blog"}>
