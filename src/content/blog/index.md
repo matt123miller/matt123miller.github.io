@@ -7,5 +7,4 @@ published: false
 ---
 
 This page should be ignored, it exists purely for astros content collections.
-They don't like how I have a folder for each page so this index.md file has to exist,
-otherwise it won't build.
+They don't like how I have a folder for each page so this index.md file has to exist, otherwise it won't build.
