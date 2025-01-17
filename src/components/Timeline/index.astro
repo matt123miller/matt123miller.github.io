@@ -1,0 +1,54 @@
+---
+interface Props {
+  timeline: TimelineEntry[];
+}
+
+export interface TimelineEntry {
+  date: string;
+  title: string;
+  description: string;
+}
+
+const { timeline } = Astro.props;
+---
+
+<ol
+  aria-label="Timeline"
+  class="flex flex-col gap-6 relative min-h-[600px] w-full max-w-2xl mx-auto py-8"
+>
+  {
+    timeline.map((entry: TimelineEntry, index: number) => {
+      return (
+        <div style="opacity: 1; transform: none;">
+          <li class="relative w-full mb-8 last:mb-0">
+            <div class="grid grid-cols-[1fr_auto_3fr] gap-4 items-start">
+              <div class="flex flex-col justify-start pt-1">
+                <time class="text-sm font-medium tracking-tight text-muted-foreground text-right pr-4">
+                  {entry.date}
+                </time>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="relative z-10">
+                  <div class="relative flex items-center justify-center rounded-full ring-8 ring-background shadow-sm h-10 w-10 bg-primary text-primary-foreground">
+                    <div class="rounded-full h-5 w-5" />
+                  </div>
+                </div>
+                <div class="h-16 w-0.5 bg-border mt-2" />
+              </div>
+              <div class="flex flex-col gap-2 pl-2">
+                <div class="flex items-center gap-4">
+                  <h3 class="font-semibold leading-none tracking-tight text-secondary-foreground">
+                    {entry.title}
+                  </h3>
+                </div>
+                <p class="max-w-sm text-sm text-muted-foreground">
+                  {entry.description}
+                </p>
+              </div>
+            </div>
+          </li>
+        </div>
+      );
+    })
+  }
+</ol>

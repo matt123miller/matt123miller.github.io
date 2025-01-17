@@ -30,23 +30,21 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
-  <div class="max-w-screen-md w-full mx-auto p-5 mt-8">
-    <h1>{entry.data.title}</h1>
-    <div>
-      {entry.data.tags.map((tag) => <Badge class="mr-4">{tag}</Badge>)}
-      <span class="text-comment pt-1 mr-4">
-        <!-- {entry.data.date.toLocaleDateString()} -->
-        <FormattedDate date={entry.data.date} />
-      </span>
-      <a
-        class="animated-link external not-prose"
-        href={editUrl}
-        rel="me"
-        target="_blank"
-      >
-        Edit this page on github<ExternalLink />
-      </a>
-    </div>
-    <Content />
+  <h1>{entry.data.title}</h1>
+  <div>
+    {entry.data.tags.map((tag) => <Badge class="mr-4">{tag}</Badge>)}
+    <span class="text-comment pt-1 mr-4">
+      <!-- {entry.data.date.toLocaleDateString()} -->
+      <FormattedDate date={entry.data.date} />
+    </span>
+    <a
+      class="animated-link external not-prose"
+      href={editUrl}
+      rel="me"
+      target="_blank"
+    >
+      Edit this page on github<ExternalLink />
+    </a>
   </div>
+  <Content />
 </Layout>
