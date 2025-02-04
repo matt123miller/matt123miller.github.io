@@ -2,6 +2,8 @@
 
 This is my personal site, a content focused Astro site.
 
+updated for pr
+
 I'm trying to follow the commit guidelines detailed in the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) which mostly follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. My ammendments are the following:
 
 - `content: <description>`
